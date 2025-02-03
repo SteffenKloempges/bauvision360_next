@@ -7,15 +7,82 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body class to prevent scrolling when modal is open */
+.modal-open {
+  overflow: hidden;
+}
+
+/* Animations for nav links */
+.nav-links {
+  display: none; /* Standard: versteckt auf Mobile */
+}
+
+@media (max-width: 1023px) { /* Mobile Styles */
+  .nav-links {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    display: flex;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1024px) { /* Desktop Styles */
+  .nav-links {
+    display: flex;
+    position: relative;
+    transform: none;
+    padding: 0;
+    height: auto;
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+/* Overlay for mobile */
+.nav-overlay {
+  display: none;
+}
+
+.nav-overlay.active {
+  display: block;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 300ms ease-in-out;
+  z-index: 10; /* Make sure the overlay stays above other content */
+}
+
+.mobile-nav-toggle.active .bar {
+  background-color: #fff; /* Change hamburger icon color when active */
+}
+
+/* Hamburger Icon (mobile-nav-toggle) */
+.mobile-nav-toggle .bar {
+  display: block;
+  width: 30px;
+  height: 4px;
+  margin: 5px 0;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-nav-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-nav-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
