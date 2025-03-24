@@ -13,7 +13,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-primary hover:bg-secondary text-white hover:text-black px-8 py-4 rounded-md transition-colors w-fit"
+              className="inline-block bg-primary hover:bg-secondary text-white px-8 py-4 rounded-md transition-colors w-fit"
             >
               Kontakt aufnehmen
             </Link>
@@ -22,7 +22,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-lightGray py-24 mt-24">
+      {/* <section className="bg-lightGray py-24 mt-24">
         <div className="max-w-7xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
             <h2 className="text-5xl font-bold text-primary mb-2">5+</h2>
@@ -37,53 +37,39 @@ export default function Home() {
             <p>Kundenorientiert</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-24 px-5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-primary text-center mb-16">
             Unsere Leistungen
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <Link
-              href="/services"
+              href="/services/professional"
               className="block bg-white rounded-lg shadow-lg hover:-translate-y-1 transition-transform"
             >
               <div className="bg-[#3a5d8f] h-[200px]"></div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-primary mb-2">
-                  Wohnungsbau
+                  Professionelle Leistungen
                 </h3>
                 <p className="text-gray-600">
-                  Moderne Wohnkonzepte für höchste Ansprüche
+                  Professionelle Unterstützung an Ihr Projekt
                 </p>
               </div>
             </Link>
             <Link
-              href="/services"
+              href="/services/crafting"
               className="block bg-white rounded-lg shadow-lg hover:-translate-y-1 transition-transform"
             >
               <div className="bg-[#3a5d8f] h-[200px]"></div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-primary mb-2">
-                  Gewerbebau
+                  Handwerkliche Leistungen
                 </h3>
                 <p className="text-gray-600">
-                  Funktionale Räume für Ihr Unternehmen
-                </p>
-              </div>
-            </Link>
-            <Link
-              href="/services"
-              className="block bg-white rounded-lg shadow-lg hover:-translate-y-1 transition-transform"
-            >
-              <div className="bg-[#3a5d8f] h-[200px]"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-primary mb-2">
-                  Sanierung
-                </h3>
-                <p className="text-gray-600">
-                  Professionelle Modernisierung bestehender Gebäude
+                  Handwerkliche Unterstützung für Ihr Projekt
                 </p>
               </div>
             </Link>

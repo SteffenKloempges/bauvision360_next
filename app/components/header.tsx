@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../images/Bauvision_logo.png";
+import Logo from "../../images/Bauvision_logo.svg";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed w-full bg-white shadow-md z-50">
+    <header className="sticky top-0 w-full bg-white shadow-md z-50">
       <nav className="relative max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
         <Link
           href="/"
@@ -32,9 +32,8 @@ export default function Header() {
           />
         </Link>
         <button
-          className={`mobile-nav-toggle lg:hidden relative z-50 ${
-            isOpen ? "active" : ""
-          }`}
+          className={`mobile-nav-toggle lg:hidden relative z-50 ${isOpen ? "active" : ""
+            }`}
           aria-label="Menü öffnen"
           onClick={toggleNav}
         >
@@ -45,34 +44,33 @@ export default function Header() {
           </div>
         </button>
         <div
-          className={`nav-links ${
-            isOpen ? "active" : ""
-          } lg:flex flex-col lg:flex-row bg-white lg:bg-transparent p-5 lg:p-0 fixed lg:relative top-0 lg:top-auto left-0 w-full lg:w-auto h-screen lg:h-auto pt-24 lg:pt-0 z-40 gap-4 items-center text-center`}
+          className={`nav-links ${isOpen ? "active" : ""
+            } lg:flex flex-col lg:flex-row bg-white lg:bg-transparent p-5 lg:p-0 fixed lg:relative top-0 lg:top-auto left-0 w-full lg:w-auto h-screen lg:h-auto pt-24 lg:pt-0 z-40 gap-4 justify-center items-center text-center`}
         >
           <Link
             href="/"
-            className="block w-full lg:w-auto bg-primary hover:bg-secondary hover:text-black text-white px-5 py-2.5 rounded-md transition-colors"
+            className="block w-full lg:w-auto bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-md transition-colors"
             onClick={closeNav}
           >
             Start
           </Link>
           <Link
             href="/about"
-            className="block w-full lg:w-auto bg-primary hover:bg-secondary hover:text-black text-white px-5 py-2.5 rounded-md transition-colors"
+            className="block w-full lg:w-auto bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-md transition-colors"
             onClick={closeNav}
           >
             Über uns
           </Link>
           <Link
             href="/services"
-            className="block w-full lg:w-auto bg-primary hover:bg-secondary hover:text-black text-white px-5 py-2.5 rounded-md transition-colors"
+            className="block w-full lg:w-auto bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-md transition-colors"
             onClick={closeNav}
           >
             Leistungen
           </Link>
           <Link
             href="/contact"
-            className="block w-full lg:w-auto bg-primary hover:bg-secondary hover:text-black text-white px-5 py-2.5 rounded-md transition-colors"
+            className="block w-full lg:w-auto bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-md transition-colors"
             onClick={closeNav}
           >
             Kontakt
