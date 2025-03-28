@@ -5,12 +5,12 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-5 py-16">
             <div className="grid md:grid-cols-3 gap-8 mb-16 md:place-items-center">
                 <div>
-                    <h3 className="text-xl font-bold mb-4">Bauvision 360</h3>
+                    <h3 className="text-xl font-bold mb-4">BAUvision360&deg;</h3>
                     <p>Ihr verlässlicher Partner im Baugewerbe</p>
                 </div>
                 <div>
                     <h3 className="text-xl font-bold mb-4">Kontakt</h3>
-                    <p>Baustraße 123<br />12345 Baustadt<br />Tel: 0123 456789<br />Email: info@bauvision360.de</p>
+                    <p>Oelder Straße 148a<br />59269 Beckum<br />Tel: +49 (0) 1575 52 67 68 0<br />Email: info@bauvision360.de</p>
                 </div>
                 <div>
                     <h3 className="text-xl font-bold mb-4">Links</h3>
@@ -21,7 +21,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="text-center pt-8 border-t border-white/10">
-                <p>&copy; 2024 Bauvision 360. Alle Rechte vorbehalten.</p>
+                <p>&copy; 2025 BAUvision360&deg;. Alle Rechte vorbehalten.</p>
             </div>
         </div>
     </footer>;

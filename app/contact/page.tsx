@@ -39,34 +39,29 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold text-primary mb-8">Schreiben Sie uns</h2>
                 <form action="#" method="POST" className="space-y-6">
                     <div className="space-y-2">
-                        <label htmlFor="name" className="block font-medium">Name *</label>
+                        <label htmlFor="name" className="block font-medium">Name <span className="text-red-500">*</span></label>
                         <input type="text" id="name" name="name" required
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Geben Sie bitte Ihren Vor- und Nachnamen an" />
                     </div>
                     <div className="space-y-2">
-                        <label htmlFor="email" className="block font-medium">E-Mail *</label>
+                        <label htmlFor="email" className="block font-medium">E-Mail <span className="text-red-500">*</span></label>
                         <input type="email" id="email" name="email" required
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Bitte geben Sie Ihre E-Mail-Adresse ein" />
                     </div>
                     <div className="space-y-2">
                         <label htmlFor="phone" className="block font-medium">Telefon</label>
                         <input type="tel" id="phone" name="phone"
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Bitte geben Sie Ihre Telefonnummer ein" />
                     </div>
                     <div className="space-y-2">
-                        <label htmlFor="date" className="block font-medium">Ausführungszeitraum *</label>
+                        <label htmlFor="date" className="block font-medium">Ausführungszeitraum <span className="text-red-500">*</span></label>
                         <input type="date" id="date" name="date" required
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Bitte geben Sie den gewünschten Ausführungszeitraum ein" />
                     </div>
                     <div className="space-y-2">
-                        <label htmlFor="project" className="block font-medium">Projektbezeichnung *</label>
-                        <input type="text" id="project" name="project" required
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
-                    </div>
-                    <div className="space-y-2">
-                        <label htmlFor="service" className="block font-medium">Welche Dienstleistungen benötigen Sie? *</label>
+                        <label htmlFor="service" className="block font-medium">Welche Dienstleistungen benötigen Sie? <span className="text-red-500">*</span></label>
                         <input type="text" id="service" name="service" required
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Was können wir für Sie tun? z.B. Trockenbau, Sanierung, etc." />
                     </div>
                     <div className="space-y-2">
                         <label htmlFor="files" className="block font-medium">Dateien hochladen</label>
@@ -74,14 +69,14 @@ export default function ContactPage() {
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
                     </div>
                     <div className="space-y-2">
-                        <label htmlFor="message" className="block font-medium">Nachricht *</label>
+                        <label htmlFor="message" className="block font-medium">Nachricht <span className="text-red-500">*</span></label>
                         <textarea id="message" name="message" rows={5} required
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Beschreiben Sie hier Ihr Projekt und Ihre Anforderungen..."></textarea>
                     </div>
                     <div className="flex items-start gap-2">
                         <input type="checkbox" id="privacy" required className="mt-1.5" />
                         <label htmlFor="privacy" className="text-sm">
-                            Ich stimme der Verarbeitung meiner Daten gemäß der Datenschutzerklärung zu *
+                            Ich stimme der Verarbeitung meiner Daten gemäß der Datenschutzerklärung zu <span className="text-red-500">*</span>
                         </label>
                     </div>
                     <button type="submit"

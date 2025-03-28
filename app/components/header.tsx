@@ -27,8 +27,8 @@ export default function Header() {
           <Image
             src={Logo}
             alt="Das Logo von Bauvision360"
-            width={140}
-            height={80}
+            width={175}
+            height={100}
           />
         </Link>
         <button

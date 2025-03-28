@@ -55,7 +55,7 @@ export default function Services() {
       </section>
       <section className="px-5 py-16 lg:py-24 text-center">
         <h1 className="text-4xl lg:text-5xl font-bold text-primary leading-tight">
-          Unsere Koordinierenden Leistungen
+          Koordinierende Leistungen
         </h1>
         <p className="text-xl text-gray-600">
           Professionelle Baudienstleistungen aus einer Hand

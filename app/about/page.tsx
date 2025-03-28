@@ -7,7 +7,7 @@ export default function About() {
     <main className="pt-20 font-sans text-gray-800">
       <section className="px-5 py-16 lg:py-24 text-center">
         <h1 className="text-4xl lg:text-5xl font-bold text-primary leading-tight">
-          Über Bauvision 360
+          Über BAUvision360&deg;
         </h1>
         <p className="text-xl text-gray-600">
           Ihr verlässlicher Partner im Baugewerbe
