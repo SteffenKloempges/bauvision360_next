@@ -54,7 +54,7 @@ export const serviceData: ServiceDataMap = {
         features: [
             "Bodenbelägen",
             "Trockenbau- und Holzrahmenbau",
-            "üren und Fenstern",
+            "Türen und Fenstern",
             "Sanitär- und Heizungs-Elemente",
             "Küchen und Möbel",
         ],
@@ -139,17 +139,17 @@ export const serviceData: ServiceDataMap = {
             "Wir vermieten Bautrocknungs- sowie Bauheizgeräte für Ihr Bauvorhaben.",
         features: ["Entfeuchtungsgeräte", "Elektronische Heizgeräte/-lüfter "],
     },
-    hochdruckreinigung: {
-        title: "Hochdruckreinigung ohne Chemikalien für Privatpersonen",
-        description:
-            "Mit unserer umweltfreundlichen Hochdruckreinigung entfernen wir Schmutz, Algen und Verunreinigungen – ganz ohne den Einsatz von Chemikalien. Ideal für Terrassen, Gehwege und mehr. Effektiv, nachhaltig und schonend für Oberflächen und Umwelt.",
-        features: [
-            "Reinigung von Terrassen, Wegen und Einfahrten",
-            "Algen- und Moosentfernung auf Ihren Gehwegen und Terrassen",
-            "Reinigung von Garagen- und Hofauffahrten",
-            "Umweltfreundliche Reinigung ohne Chemikalien",
-        ],
-    },
+    // hochdruckreinigung: {
+    //     title: "Hochdruckreinigung ohne Chemikalien für Privatpersonen",
+    //     description:
+    //         "Mit unserer umweltfreundlichen Hochdruckreinigung entfernen wir Schmutz, Algen und Verunreinigungen – ganz ohne den Einsatz von Chemikalien. Ideal für Terrassen, Gehwege und mehr. Effektiv, nachhaltig und schonend für Oberflächen und Umwelt.",
+    //     features: [
+    //         "Reinigung von Terrassen, Wegen und Einfahrten",
+    //         "Algen- und Moosentfernung auf Ihren Gehwegen und Terrassen",
+    //         "Reinigung von Garagen- und Hofauffahrten",
+    //         "Umweltfreundliche Reinigung ohne Chemikalien",
+    //     ],
+    // },
 };
 
 export const craftingServices: ServiceDataMap = {
@@ -197,7 +197,7 @@ export const craftingServices: ServiceDataMap = {
         features: [
             "Bodenbelägen",
             "Trockenbau- und Holzrahmenbau",
-            "üren und Fenstern",
+            "Türen und Fenstern",
             "Sanitär- und Heizungs-Elemente",
             "Küchen und Möbel",
         ],
@@ -282,17 +282,17 @@ export const craftingServices: ServiceDataMap = {
             "Wir vermieten Bautrocknungs- sowie Bauheizgeräte für Ihr Bauvorhaben.",
         features: ["Entfeuchtungsgeräte", "Elektronische Heizgeräte/-lüfter "],
     },
-    hochdruckreinigung: {
-        title: "Hochdruckreinigung ohne Chemikalien für Privatpersonen",
-        description:
-            "Mit unserer umweltfreundlichen Hochdruckreinigung entfernen wir Schmutz, Algen und Verunreinigungen – ganz ohne den Einsatz von Chemikalien. Ideal für Terrassen, Gehwege und mehr. Effektiv, nachhaltig und schonend für Oberflächen und Umwelt.",
-        features: [
-            "Reinigung von Terrassen, Wegen und Einfahrten",
-            "Algen- und Moosentfernung auf Ihren Gehwegen und Terrassen",
-            "Reinigung von Garagen- und Hofauffahrten",
-            "Umweltfreundliche Reinigung ohne Chemikalien",
-        ],
-    },
+    // hochdruckreinigung: {
+    //     title: "Hochdruckreinigung ohne Chemikalien für Privatpersonen",
+    //     description:
+    //         "Mit unserer umweltfreundlichen Hochdruckreinigung entfernen wir Schmutz, Algen und Verunreinigungen – ganz ohne den Einsatz von Chemikalien. Ideal für Terrassen, Gehwege und mehr. Effektiv, nachhaltig und schonend für Oberflächen und Umwelt.",
+    //     features: [
+    //         "Reinigung von Terrassen, Wegen und Einfahrten",
+    //         "Algen- und Moosentfernung auf Ihren Gehwegen und Terrassen",
+    //         "Reinigung von Garagen- und Hofauffahrten",
+    //         "Umweltfreundliche Reinigung ohne Chemikalien",
+    //     ],
+    // },
 };
 
 export const professionalServices: ServiceDataMap = {

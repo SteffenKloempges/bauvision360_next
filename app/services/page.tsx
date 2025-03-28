@@ -30,10 +30,10 @@ export default function Services() {
     <main className="pt-20 font-sans text-gray-800">
       <section className="px-5 py-16 lg:py-24 text-center">
         <h1 className="text-4xl lg:text-5xl font-bold text-primary leading-tight">
-          Handwerklichen Leistungen
+          Handwerkliche Leistungen
         </h1>
         <p className="text-xl text-gray-600">
-          Alles aus einer Hand
+          Alles aus einer Hand für Ihr Projekt
         </p>
       </section>
       <section className="px-5 py-16">
@@ -55,7 +55,7 @@ export default function Services() {
       </section>
       <section className="px-5 py-16 lg:py-24 text-center">
         <h1 className="text-4xl lg:text-5xl font-bold text-primary leading-tight">
-          Unsere Professionellen Leistungen
+          Unsere Koordinierenden Leistungen
         </h1>
         <p className="text-xl text-gray-600">
           Professionelle Baudienstleistungen aus einer Hand

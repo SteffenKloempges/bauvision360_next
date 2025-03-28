@@ -19,16 +19,16 @@ export default function ContactPage() {
                         <p className="text-gray-600">info@bauvision360.de</p>
                     </div>
                     <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:-translate-y-2 transition-transform">
-                        <a href="tel:+491234567890">
+                        <a href="tel:+4915755267680">
                             <div className="text-primary text-3xl mb-4">📱</div>
                             <h3 className="text-xl font-semibold mb-2">Telefon</h3>
-                            <p className="text-gray-600">+49 (0) 123 456 789</p>
+                            <p className="text-gray-600">+49 (0) 1575 52 67 68 0</p>
                         </a>
                     </div>
                     <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:-translate-y-2 transition-transform">
                         <div className="text-primary text-3xl mb-4">🏢</div>
                         <h3 className="text-xl font-semibold mb-2">Adresse</h3>
-                        <p className="text-gray-600">Baustraße 123<br />12345 Baustadt</p>
+                        <p className="text-gray-600">Oelder Straße 148a<br />59269 Beckum</p>
                     </div>
                 </div>
             </div>

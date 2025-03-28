@@ -52,7 +52,7 @@ export default function Home() {
               <div className="bg-[#3a5d8f] h-[200px]"></div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-primary mb-2">
-                  Professionelle Leistungen
+                  Koordinierung
                 </h3>
                 <p className="text-gray-600">
                   Professionelle Unterstützung an Ihr Projekt
@@ -66,7 +66,7 @@ export default function Home() {
               <div className="bg-[#3a5d8f] h-[200px]"></div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-primary mb-2">
-                  Handwerkliche Leistungen
+                  Handwerkliche Gewerke
                 </h3>
                 <p className="text-gray-600">
                   Handwerkliche Unterstützung für Ihr Projekt
