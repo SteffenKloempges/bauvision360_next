@@ -1,5 +1,5 @@
 'use client';
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ServiceData, professionalServices, craftingServices, serviceData, ServiceDataMap } from '../services';
 import Link from "next/link";
