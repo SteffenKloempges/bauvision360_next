@@ -1,5 +1,4 @@
 import { Accordion, AccordionItem } from "@heroui/accordion";
-import { section } from "framer-motion/client";
 
 const AccordionComponent = () => {
 
