@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Bauvision360°",
-  description: "Dein Bauunternehmen für 360°-Bauvision",
+  description: "BAUvision360 ist Ihr Bauunternehmen. Alles aus einer Hand.",
 };
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.className} antialiased`}
       >
-        <Header />  
+        <Header />
         {children}
         <Footer />
       </body>

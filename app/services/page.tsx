@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { serviceData, ServiceData, professionalServices } from "./services";
+import AccordionComponent from "../components/accordion";
 
 
 
@@ -13,11 +14,20 @@ export default function Services() {
 
   const openModal = (serviceType: string) => {
     const data = serviceData[serviceType];
-    if (!data) return;
+    if (data) {
+      setCurrentService(data);
+      setIsModalOpen(true);
+      document.body.style.overflow = "hidden";
+      return;
+    }
 
-    setCurrentService(data);
-    setIsModalOpen(true);
-    document.body.style.overflow = "hidden";
+    const professionalData = professionalServices[serviceType];
+    if (professionalData) {
+      setCurrentService(professionalData);
+      setIsModalOpen(true);
+      document.body.style.overflow = "hidden";
+      return;
+    }
   };
 
   const closeModal = () => {
@@ -78,6 +88,7 @@ export default function Services() {
           ))}
         </div>
       </section>
+      <AccordionComponent />
 
       <section className="py-16 px-5 text-center">
         <div className="max-w-2xl mx-auto space-y-6">
