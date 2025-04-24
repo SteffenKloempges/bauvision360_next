@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Bauvision360°",
+  title: "BAUvision360°",
   description: "BAUvision360 ist Ihr Bauunternehmen. Alles aus einer Hand.",
 };
 

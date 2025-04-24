@@ -1,10 +1,15 @@
 import Link from "next/link";
+import ImageSlider from "@/app/components/imageSlider";
+import ImageKoordinierung from '@/images/services/NEU_Bauleitung.webp';
+import ImageGewerke from '@/images/services/03_Trockenbau.webp';
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="font-sans text-gray-800">
       <section className="pt-24 lg:pt-32 px-5">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
-          <div className="flex flex-col justify-center space-y-8">
+          <div className="flex flex-col justify-center space-y-8 h-96">
             <h1 className="text-4xl lg:text-5xl font-bold text-primary leading-tight">
               Handwerk und Bauleitung aus einer Hand
             </h1>
@@ -18,7 +23,7 @@ export default function Home() {
               Kontakt aufnehmen
             </Link>
           </div>
-          <div className="bg-[#2a4b7c] h-[500px]"></div>
+          <ImageSlider />
         </div>
       </section>
 
@@ -47,9 +52,16 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <Link
               href="/services/professional"
-              className="block bg-white rounded-lg shadow-lg hover:-translate-y-1 transition-transform"
+              className="block bg-white rounded-lg shadow-lg hover:-translate-y-1 transition-transform overflow-hidden"
             >
-              <div className="bg-[#3a5d8f] h-[200px]"></div>
+              <div className="relative w-full h-72">
+                <Image
+                  src={ImageKoordinierung}
+                  layout="fill"
+                  alt="Hier sieht man eine Koordinierende Bauleistung"
+                  objectFit="cover"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-primary mb-2">
                   Koordinierung
@@ -61,9 +73,16 @@ export default function Home() {
             </Link>
             <Link
               href="/services/crafting"
-              className="block bg-white rounded-lg shadow-lg hover:-translate-y-1 transition-transform"
+              className="block bg-white rounded-lg shadow-lg hover:-translate-y-1 transition-transform overflow-hidden"
             >
-              <div className="bg-[#3a5d8f] h-[200px]"></div>
+              <div className="relative w-full h-72">
+                <Image
+                  src={ImageGewerke}
+                  layout="fill"
+                  alt="Hier sieht man eine Koordinierende Bauleistung"
+                  objectFit="cover"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-primary mb-2">
                   Handwerkliche Gewerke

@@ -48,7 +48,7 @@ export async function POST(request: Request) {
                     <li><strong>Dienstleistung:</strong> ${service}</li>
                     <li><strong>Ausführungszeitraum:</strong> ${date}</li>
                 </ul>
-                <p>Mit freundlichen Grüßen<br>Ihr Team von BAUvision360°</p>
+                <p>Mit freundlichen Grüßen<br>Ihr BAUvision360°-Team</p>
             `
         };
 
