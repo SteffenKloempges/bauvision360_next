@@ -11,39 +11,49 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 
 export default function ImageSlider() {
-
-    return <div>
-        <Swiper spaceBetween={0} slidesPerView={1} modules={[Autoplay]} autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-        }}>
-            <SwiperSlide>
-                <Image
-                    src={Logo}
-                    width={650}
-                    height={600}
-                    alt="Images"
-                    className="rounded-xl"
-                />
-            </SwiperSlide>
-            <SwiperSlide>
-                <Image
-                    src={FirstImage}
-                    width={650}
-                    height={600}
-                    alt="Images"
-                    className="rounded-xl"
-                />
-            </SwiperSlide>
-            <SwiperSlide>
-                <Image
-                    src={SecondImage}
-                    width={650}
-                    height={600}
-                    alt="Images"
-                    className="rounded-xl"
-                />
-            </SwiperSlide>
-        </Swiper>
-    </div>
+    return (
+        <div className='w-full overflow-hidden'>
+            <Swiper 
+                spaceBetween={0} 
+                slidesPerView={1} 
+                modules={[Autoplay]} 
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                }}
+                className="w-full"
+            >
+                <SwiperSlide className="w-full">
+                    <div className="relative w-full aspect-[16/9] lg:mx-0">
+                       <Image
+                            src={Logo}
+                            fill
+                            alt="Bauvision Logo"
+                            className= "rounded-xl object-contain"
+                        />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className="w-full">
+                    <div className="relative w-full aspect-[16/9] lg:mx-0">
+                        <Image
+                            src={FirstImage}
+                            fill
+                            alt="Bauvision Service 1"
+                            className="rounded-xl object-cover"
+                        />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className="w-full">
+                    <div className="relative w-full aspect-[16/9] lg:mx-0">
+                        <Image
+                            src={SecondImage}
+                            fill
+                            alt="Bauvision Service 2"
+                            className="rounded-xl object-cover"
+                        />
+                    </div>
+                </SwiperSlide>
+            </Swiper>
+        </div>
+    );
 }

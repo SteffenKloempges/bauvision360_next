@@ -26,24 +26,6 @@ export default function Home() {
           <ImageSlider />
         </div>
       </section>
-
-      {/* <section className="bg-lightGray py-24 mt-24">
-        <div className="max-w-7xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <h2 className="text-5xl font-bold text-primary mb-2">5+</h2>
-            <p>Jahre Erfahrung</p>
-          </div>
-          <div className="text-center">
-            <h2 className="text-5xl font-bold text-primary mb-2">10+</h2>
-            <p>Projekte</p>
-          </div>
-          <div className="text-center">
-            <h2 className="text-5xl font-bold text-primary mb-2">100%</h2>
-            <p>Kundenorientiert</p>
-          </div>
-        </div>
-      </section> */}
-
       <section className="py-24 px-5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-primary text-center mb-16">
@@ -95,7 +77,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="bg-lightGray py-24">
         <div className="max-w-7xl mx-auto px-5">
           <h2 className="text-3xl font-bold text-primary text-center mb-16">

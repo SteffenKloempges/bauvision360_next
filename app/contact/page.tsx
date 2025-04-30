@@ -1,68 +1,68 @@
 "use client";
-import { useState } from 'react';
+// import { useState } from 'react';
 
 export default function ContactPage() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        date: '',
-        service: '',
-        message: '',
-        privacy: false
-    });
-    const [status, setStatus] = useState<{ type: 'success' | 'error', message: string } | null>(null);
-    const [isSubmitting, setIsSubmitting] = useState(false);
+    // const [formData, setFormData] = useState({
+    //     name: '',
+    //     email: '',
+    //     phone: '',
+    //     date: '',
+    //     service: '',
+    //     message: '',
+    //     privacy: false
+    // });
+    // const [status, setStatus] = useState<{ type: 'success' | 'error', message: string } | null>(null);
+    // const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        setStatus(null);
+    // const handleSubmit = async (e: React.FormEvent) => {
+    //     e.preventDefault();
+    //     setIsSubmitting(true);
+    //     setStatus(null);
 
-        try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
+    //     try {
+    //         const response = await fetch('/api/contact', {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify(formData),
+    //         });
 
-            if (!response.ok) {
-                throw new Error('Fehler beim Senden der Nachricht');
-            }
+    //         if (!response.ok) {
+    //             throw new Error('Fehler beim Senden der Nachricht');
+    //         }
 
-            setStatus({
-                type: 'success',
-                message: 'Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns bei Ihnen.'
-            });
-            setFormData({
-                name: '',
-                email: '',
-                phone: '',
-                date: '',
-                service: '',
-                message: '',
-                privacy: false
-            });
-        } catch (error) {
-            setStatus({
-                type: 'error',
-                message: 'Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.'
-            });
-            console.error(error);
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
+    //         setStatus({
+    //             type: 'success',
+    //             message: 'Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns bei Ihnen.'
+    //         });
+    //         setFormData({
+    //             name: '',
+    //             email: '',
+    //             phone: '',
+    //             date: '',
+    //             service: '',
+    //             message: '',
+    //             privacy: false
+    //         });
+    //     } catch (error) {
+    //         setStatus({
+    //             type: 'error',
+    //             message: 'Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.'
+    //         });
+    //         console.error(error);
+    //     } finally {
+    //         setIsSubmitting(false);
+    //     }
+    // };
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value, type } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
-        }));
-    };
+    // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    //     const { name, value, type } = e.target;
+    //     setFormData(prev => ({
+    //         ...prev,
+    //         [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
+    //     }));
+    // };
 
     return <main className="pt-20 font-sans text-gray-800">
         <section className="px-5 py-16 lg:py-24 text-center">

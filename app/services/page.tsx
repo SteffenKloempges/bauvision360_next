@@ -5,10 +5,6 @@ import { serviceData, ServiceData, professionalServices } from "./services";
 import AccordionComponent from "../components/accordion";
 import Image from "next/image";
 
-import Logo from '@/images/Bauvision_logo.svg';
-
-
-
 export default function Services() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentService, setCurrentService] = useState<ServiceData | null>(
@@ -58,12 +54,12 @@ export default function Services() {
               onClick={() => openModal(key)}
             >
               <div className="w-full h-48 relative mb-4 rounded overflow-hidden">
-              <Image
-                src={service.image}
-                layout="fill"
-                alt={service.title}
-                objectFit="cover"
-              />
+                <Image
+                  src={service.image}
+                  layout="fill"
+                  alt={service.title}
+                  objectFit="cover"
+                />
               </div>
               <h3 className="text-xl font-bold text-primary mb-4">
                 {service.title}
@@ -90,12 +86,12 @@ export default function Services() {
               onClick={() => openModal(key)}
             >
               <div className="w-full h-48 relative mb-4 rounded overflow-hidden">
-              <Image
-                src={service.image}
-                layout="fill"
-                alt={service.title}
-                objectFit="cover"
-              />
+                <Image
+                  src={service.image}
+                  layout="fill"
+                  alt={service.title}
+                  objectFit="cover"
+                />
               </div>
               <h3 className="text-xl font-bold text-primary mb-4">
                 {service.title}
