@@ -20,7 +20,7 @@ const SingleService = () => {
         } else if (pathname.includes("crafting")) {
             setDataState(craftingServices);
         }
-    }, [])
+    }, [pathname])
     console.log(dataState);
 
     const openModal = (serviceType: string) => {

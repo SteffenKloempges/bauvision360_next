@@ -25,38 +25,20 @@ const images: ImageData[] = [
 export default function ImageSlider() {
 
     const [currentIndex, setCurrentIndex] = useState<number>(0);
-    const [isHovered, setIsHovered] = useState<boolean>(false);
-
-    const prevSlide = (): void => {
-        setCurrentIndex(
-            (prevIndex) => (prevIndex - 1 + images.length) % images.length
-        );
-    };
 
     const nextSlide = (): void => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     };
 
     useEffect(() => {
-        if (!isHovered) {
-            const interval = setInterval(() => {
-                nextSlide();
-            }, 3000);
+        const interval = setInterval(() => {
+            nextSlide();
+        }, 3000);
 
-            return () => {
-                clearInterval(interval);
-            };
-        }
-    }, [isHovered]);
-
-    const handleMouseOver = (): void => {
-        setIsHovered(true);
-    };
-
-    const handleMouseLeave = (): void => {
-        setIsHovered(false);
-    };
-
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
 
     return <div className='relative w-[650] h-[600]'>
         <Image
