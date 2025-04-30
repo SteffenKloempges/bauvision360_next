@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Marcel from "../../images/Marcel_Lenckowski.png";
-import Fabian from "../../images/Fabian_Reitemeier.png";
+// import Fabian from "../../images/Fabian_Reitemeier.png";
+
+import AboutImage from '@/images/services/NEU_Bauleitung.webp';
 
 export default function About() {
   return (
@@ -15,7 +17,14 @@ export default function About() {
       </section>
       <section className="px-5 py-16">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
-          <div className="bg-[#3a5d8f] h-[300px]"></div>
+          <Image
+            src={AboutImage}
+            width={500}
+            height={600}
+            alt=''
+            className="rounded mx-auto"
+          />
+
           <div className="">
             <h2 className="text-3xl font-bold text-primary mb-6">
               Unsere Geschichte

@@ -3,6 +3,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { serviceData, ServiceData, professionalServices } from "./services";
 import AccordionComponent from "../components/accordion";
+import Image from "next/image";
+
+import Logo from '@/images/Bauvision_logo.svg';
 
 
 
@@ -47,14 +50,21 @@ export default function Services() {
         </p>
       </section>
       <section className="px-5 py-16">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4     gap-8">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {Object.entries(serviceData).map(([key, service]) => (
             <div
               key={key}
               className="bg-white p-8 rounded-lg shadow-lg hover:-translate-y-1 transition-transform cursor-pointer"
               onClick={() => openModal(key)}
             >
-              <div className="w-16 h-16 rounded-full bg-[#3a5d8f] mb-6"></div>
+              <div className="w-full h-48 relative mb-4 rounded overflow-hidden">
+              <Image
+                src={service.image}
+                layout="fill"
+                alt={service.title}
+                objectFit="cover"
+              />
+              </div>
               <h3 className="text-xl font-bold text-primary mb-4">
                 {service.title}
               </h3>
@@ -79,7 +89,14 @@ export default function Services() {
               className="bg-white p-8 rounded-lg shadow-lg hover:-translate-y-1 transition-transform cursor-pointer"
               onClick={() => openModal(key)}
             >
-              <div className="w-16 h-16 rounded-full bg-[#3a5d8f] mb-6"></div>
+              <div className="w-full h-48 relative mb-4 rounded overflow-hidden">
+              <Image
+                src={service.image}
+                layout="fill"
+                alt={service.title}
+                objectFit="cover"
+              />
+              </div>
               <h3 className="text-xl font-bold text-primary mb-4">
                 {service.title}
               </h3>

@@ -3,6 +3,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ServiceData, professionalServices, craftingServices, serviceData, ServiceDataMap } from '../services';
 import Link from "next/link";
+import Image from "next/image";
 
 const SingleService = () => {
     const pathname = usePathname();
@@ -57,7 +58,14 @@ const SingleService = () => {
                         className="bg-white p-8 rounded-lg shadow-lg hover:-translate-y-1 transition-transform cursor-pointer"
                         onClick={() => openModal(key)}
                     >
-                        <div className="w-16 h-16 rounded-full bg-[#3a5d8f] mb-6"></div>
+                        <div className="w-full h-48 relative mb-4 rounded overflow-hidden">
+              <Image
+                src={service.image}
+                layout="fill"
+                alt={service.title}
+                objectFit="cover"
+              />
+              </div>
                         <h3 className="text-xl font-bold text-primary mb-4">
                             {service.title}
                         </h3>

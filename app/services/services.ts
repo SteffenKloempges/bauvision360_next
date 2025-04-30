@@ -3,6 +3,7 @@ export interface ServiceData {
     description: string;
     features: string[];
     nachtrag?: string;
+    image: string;
 }
 
 export interface ServiceDataMap {
@@ -22,6 +23,7 @@ export const serviceData: ServiceDataMap = {
             "Dachgeschossausbau",
             "Raumgestaltung und Raumtrennung",
         ],
+        image: "/images/services/03_Trockenbau.webp"
     },
     bodenbelagsarbeiten: {
         title: "Bodenbelagsarbeiten",
@@ -35,6 +37,7 @@ export const serviceData: ServiceDataMap = {
             "Teppichbodenfliesen",
             "Sockelleisten",
         ],
+        image: "/images/services/04_Boden.webp"
     },
     tapezier_streicharbeiten: {
         title: "Tapezier und Streicharbeit",
@@ -46,6 +49,7 @@ export const serviceData: ServiceDataMap = {
             "Tapezieren von Raufasertapete",
             "Überstreichen in Ihrer Wunschfarbe",
         ],
+        image: "/images/services/06_Maler.webp"
     },
     demontage_und_abbruch: {
         title: "Demontage & Abbruch",
@@ -60,6 +64,7 @@ export const serviceData: ServiceDataMap = {
         ],
         nachtrag:
             "inkl. fachgerechter Entsorgung. Gerne übernehmen wir auch die Bestellung eines Bauschutt-Containers.",
+        image: "/images/Bauvision_logo.svg"
     },
     pflaster_und_gartenarbeiten: {
         title: "Pflaster- & Gartenarbeiten",
@@ -71,6 +76,7 @@ export const serviceData: ServiceDataMap = {
             "Beete anlegen und bepflanzen",
             "Verlegung von Pflasterflächen und Randsteine",
         ],
+        image: "/images/services/10_Garten.webp"
     },
     entruempelung_und_haushaltsaufloesung: {
         title: "Entrümpelung & Haushaltsauflösung",
@@ -84,6 +90,7 @@ export const serviceData: ServiceDataMap = {
             "Transparente Preisgestaltung",
             "Wiederverwertung brauchbarer Gegenstände",
         ],
+        image: "/images/Bauvision_logo.svg"
     },
     kuechenmontage: {
         title: "Küchenmontage",
@@ -97,6 +104,7 @@ export const serviceData: ServiceDataMap = {
             "Demontage und Entsorgung Ihrer alten Küche",
             "Transport und Lieferung Ihrer bestellten Küche (auch von Privatverkäufern)",
         ],
+        image: "/images/services/07_Küche.webp"
     },
     tuer_und_fenstermontage: {
         title: "Tür- & Fenstermontage",
@@ -108,6 +116,7 @@ export const serviceData: ServiceDataMap = {
             "Lieferung und Montage ",
             "Kürzen von Bestandstüren",
         ],
+        image: "/images/services/08_Tür.webp"
     },
     transport: {
         title: "Transport und Klein-Umzüge",
@@ -120,6 +129,7 @@ export const serviceData: ServiceDataMap = {
             "Erfahrene Fahrer und Möbelpacker",
             "Transparente Preisgestaltung",
         ],
+        image: "/images/services/09_Umzug.webp"
     },
     winterdienst: {
         title: "Winterdienst und Schneeräumung für Privatpersonen",
@@ -132,27 +142,19 @@ export const serviceData: ServiceDataMap = {
             "Flexible Einsatzzeiten bei starkem Schneefall nach Ihren Terminvorgaben",
             "Pünktlicher Winterdienst rund um die Uhr, auch in der Nacht",
         ],
+        image: "/images/services/11_Schnee.webp"
     },
     vermietung: {
         title: "Vermietung von Baugeräten",
         description:
             "Wir vermieten Bautrocknungs- sowie Bauheizgeräte für Ihr Bauvorhaben.",
         features: ["Entfeuchtungsgeräte", "Elektronische Heizgeräte/-lüfter "],
-    },
-    // hochdruckreinigung: {
-    //     title: "Hochdruckreinigung ohne Chemikalien für Privatpersonen",
-    //     description:
-    //         "Mit unserer umweltfreundlichen Hochdruckreinigung entfernen wir Schmutz, Algen und Verunreinigungen – ganz ohne den Einsatz von Chemikalien. Ideal für Terrassen, Gehwege und mehr. Effektiv, nachhaltig und schonend für Oberflächen und Umwelt.",
-    //     features: [
-    //         "Reinigung von Terrassen, Wegen und Einfahrten",
-    //         "Algen- und Moosentfernung auf Ihren Gehwegen und Terrassen",
-    //         "Reinigung von Garagen- und Hofauffahrten",
-    //         "Umweltfreundliche Reinigung ohne Chemikalien",
-    //     ],
-    // },
+        image: "/images/Bauvision_logo.svg"
+    }
 };
 
 export const craftingServices: ServiceDataMap = {
+    // ... existing code ...
     trockenbau: {
         title: "Trockenbau",
         description:
@@ -165,6 +167,7 @@ export const craftingServices: ServiceDataMap = {
             "Dachgeschossausbau",
             "Raumgestaltung und Raumtrennung",
         ],
+        image: "/images/services/03_Trockenbau.webp"
     },
     bodenbelagsarbeiten: {
         title: "Bodenbelagsarbeiten",
@@ -178,6 +181,7 @@ export const craftingServices: ServiceDataMap = {
             "Teppichbodenfliesen",
             "Sockelleisten",
         ],
+        image: "/images/services/04_Boden.webp"
     },
     tapezier_streicharbeiten: {
         title: "Tapezier und Streicharbeit",
@@ -189,6 +193,7 @@ export const craftingServices: ServiceDataMap = {
             "Tapezieren von Raufasertapete",
             "Überstreichen in Ihrer Wunschfarbe",
         ],
+        image: "/images/services/06_Maler.webp"
     },
     demontage_und_abbruch: {
         title: "Demontage & Abbruch",
@@ -203,6 +208,7 @@ export const craftingServices: ServiceDataMap = {
         ],
         nachtrag:
             "inkl. fachgerechter Entsorgung. Gerne übernehmen wir auch die Bestellung eines Bauschutt-Containers.",
+        image: "/images/Bauvision_logo.svg"
     },
     pflaster_und_gartenarbeiten: {
         title: "Pflaster- & Gartenarbeiten",
@@ -214,6 +220,7 @@ export const craftingServices: ServiceDataMap = {
             "Beete anlegen und bepflanzen",
             "Verlegung von Pflasterflächen und Randsteine",
         ],
+        image: "/images/services/10_Garten.webp"
     },
     entruempelung_und_haushaltsaufloesung: {
         title: "Entrümpelung & Haushaltsauflösung",
@@ -227,6 +234,7 @@ export const craftingServices: ServiceDataMap = {
             "Transparente Preisgestaltung",
             "Wiederverwertung brauchbarer Gegenstände",
         ],
+        image: "/images/Bauvision_logo.svg"
     },
     kuechenmontage: {
         title: "Küchenmontage",
@@ -240,6 +248,7 @@ export const craftingServices: ServiceDataMap = {
             "Demontage und Entsorgung Ihrer alten Küche",
             "Transport und Lieferung Ihrer bestellten Küche (auch von Privatverkäufern)",
         ],
+        image: "/images/services/07_Küche.webp"
     },
     tuer_und_fenstermontage: {
         title: "Tür- & Fenstermontage",
@@ -251,6 +260,7 @@ export const craftingServices: ServiceDataMap = {
             "Lieferung und Montage ",
             "Kürzen von Bestandstüren",
         ],
+        image: "/images/services/08_Tür.webp"
     },
     transport: {
         title: "Transport und Klein-Umzüge",
@@ -263,6 +273,7 @@ export const craftingServices: ServiceDataMap = {
             "Erfahrene Fahrer und Möbelpacker",
             "Transparente Preisgestaltung",
         ],
+        image: "/images/services/09_Umzug.webp"
     },
     winterdienst: {
         title: "Winterdienst und Schneeräumung für Privatpersonen",
@@ -275,24 +286,15 @@ export const craftingServices: ServiceDataMap = {
             "Flexible Einsatzzeiten bei starkem Schneefall nach Ihren Terminvorgaben",
             "Pünktlicher Winterdienst rund um die Uhr, auch in der Nacht",
         ],
+        image: "/images/services/11_Schnee.webp"
     },
     vermietung: {
         title: "Vermietung von Baugeräten",
         description:
             "Wir vermieten Bautrocknungs- sowie Bauheizgeräte für Ihr Bauvorhaben.",
         features: ["Entfeuchtungsgeräte", "Elektronische Heizgeräte/-lüfter "],
-    },
-    // hochdruckreinigung: {
-    //     title: "Hochdruckreinigung ohne Chemikalien für Privatpersonen",
-    //     description:
-    //         "Mit unserer umweltfreundlichen Hochdruckreinigung entfernen wir Schmutz, Algen und Verunreinigungen – ganz ohne den Einsatz von Chemikalien. Ideal für Terrassen, Gehwege und mehr. Effektiv, nachhaltig und schonend für Oberflächen und Umwelt.",
-    //     features: [
-    //         "Reinigung von Terrassen, Wegen und Einfahrten",
-    //         "Algen- und Moosentfernung auf Ihren Gehwegen und Terrassen",
-    //         "Reinigung von Garagen- und Hofauffahrten",
-    //         "Umweltfreundliche Reinigung ohne Chemikalien",
-    //     ],
-    // },
+        image: "/images/Bauvision_logo.svg"
+    }
 };
 
 export const professionalServices: ServiceDataMap = {
@@ -308,6 +310,7 @@ export const professionalServices: ServiceDataMap = {
             "Unterstützung bei Bauanträgen",
             "Reibungslose Projektabwicklung",
         ],
+        image: "/images/services/NEU_Bauleitung.webp"
     },
     SiGeKo: {
         title: "Sicherheits- und Gesundheitsschutzkoor. (SiGeKo)",
@@ -319,5 +322,6 @@ export const professionalServices: ServiceDataMap = {
             "Baustellenbegehungen inkl. Protokollführung",
             "Überwachung der Schutzmaßnahmen auf der Baustelle bis zur Fertigstellung",
         ],
+        image: "/images/services/NEU_SiGeKo.webp"
     },
 }
