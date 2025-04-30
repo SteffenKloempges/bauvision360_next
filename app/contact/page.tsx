@@ -79,9 +79,11 @@ export default function ContactPage() {
             <div className="max-w-7xl mx-auto sm:px-5 lg:px-0">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:-translate-y-2 transition-transform">
-                        <div className="text-primary text-3xl mb-4">📧</div>
-                        <h3 className="text-xl font-semibold mb-2">E-Mail</h3>
-                        <p className="text-gray-600">info@bauvision360.de</p>
+                        <a href="mailto:info@bauvision360.de">
+                            <div className="text-primary text-3xl mb-4">📧</div>
+                            <h3 className="text-xl font-semibold mb-2">E-Mail</h3>
+                            <p className="text-gray-600">info@bauvision360.de</p>
+                        </a>
                     </div>
                     <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:-translate-y-2 transition-transform">
                         <a href="tel:+4915755267680">
@@ -99,7 +101,7 @@ export default function ContactPage() {
             </div>
         </section>
 
-        <section className="bg-lightGray py-16 px-5">
+        {/* <section className="bg-lightGray py-16 px-5">
             <div className="max-w-7xl mx-auto bg-white p-8 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-bold text-primary mb-8">Schreiben Sie uns</h2>
                 {status && (
@@ -173,6 +175,6 @@ export default function ContactPage() {
                     </button>
                 </form>
             </div>
-        </section>
+        </section> */}
     </main>
 }
