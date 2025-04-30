@@ -43,7 +43,7 @@ export default function About() {
           <h2 className="text-3xl font-bold text-primary text-center mb-16">
             Geschäftsführende Ebene
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 place-items-center">
+          <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 place-items-center">
             <div className="">
               <Image
                 src={Marcel}
@@ -63,7 +63,7 @@ export default function About() {
                 Gelernter Tischler / Küchenmonteur
               </p>
             </div>
-            <div className="">
+            {/* <div className="">
               <Image
                 src={Fabian}
                 alt="Marcel Lenckowski"
@@ -77,7 +77,7 @@ export default function About() {
               <p className="text-gray-600">Bauleitung</p>
               <p className="text-gray-600">Trockenbauer</p>
               <p className="text-gray-600">Gelernter Tischler / Bodenleger</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
