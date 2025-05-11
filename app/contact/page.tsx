@@ -1,107 +1,92 @@
 "use client";
-// import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 export default function ContactPage() {
-    // const [formData, setFormData] = useState({
-    //     name: '',
-    //     email: '',
-    //     phone: '',
-    //     date: '',
-    //     service: '',
-    //     message: '',
-    //     privacy: false
-    // });
-    // const [status, setStatus] = useState<{ type: 'success' | 'error', message: string } | null>(null);
-    // const [isSubmitting, setIsSubmitting] = useState(false);
+    const searchParams = useSearchParams();
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        date: '',
+        service: '',
+        message: '',
+        privacy: false
+    });
+    const [status, setStatus] = useState<{ type: 'success' | 'error', message: string } | null>(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-    // const handleSubmit = async (e: React.FormEvent) => {
-    //     e.preventDefault();
-    //     setIsSubmitting(true);
-    //     setStatus(null);
+    useEffect(() => {
+        const serviceParam = searchParams.get('service');
+        if (serviceParam) {
+            setFormData(prev => ({
+                ...prev,
+                service: decodeURIComponent(serviceParam)
+            }));
+        }
+    }, [searchParams]);
 
-    //     try {
-    //         const response = await fetch('/api/contact', {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify(formData),
-    //         });
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setStatus(null);
 
-    //         if (!response.ok) {
-    //             throw new Error('Fehler beim Senden der Nachricht');
-    //         }
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
 
-    //         setStatus({
-    //             type: 'success',
-    //             message: 'Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns bei Ihnen.'
-    //         });
-    //         setFormData({
-    //             name: '',
-    //             email: '',
-    //             phone: '',
-    //             date: '',
-    //             service: '',
-    //             message: '',
-    //             privacy: false
-    //         });
-    //     } catch (error) {
-    //         setStatus({
-    //             type: 'error',
-    //             message: 'Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.'
-    //         });
-    //         console.error(error);
-    //     } finally {
-    //         setIsSubmitting(false);
-    //     }
-    // };
+            if (!response.ok) {
+                throw new Error('Fehler beim Senden der Nachricht');
+            }
 
-    // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    //     const { name, value, type } = e.target;
-    //     setFormData(prev => ({
-    //         ...prev,
-    //         [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
-    //     }));
-    // };
+            setStatus({
+                type: 'success',
+                message: 'Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns bei Ihnen.'
+            });
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                date: '',
+                service: '',
+                message: '',
+                privacy: false
+            });
+        } catch (error) {
+            setStatus({
+                type: 'error',
+                message: 'Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.'
+            });
+            console.error(error);
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
-    return <main className="pt-20 font-sans text-gray-800">
-        <section className="px-5 py-16 lg:py-24 text-center">
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value, type } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
+        }));
+    };
 
+    return (
+    <main className="pt-4 font-sans text-gray-800">
+        <section className="px-5 lg:py-16 text-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-primary leading-tight">
                 Kontaktieren Sie uns
             </h1>
             <p className="text-xl text-gray-600">
                 Wir freuen uns auf Ihre Nachricht
             </p>
-
         </section>
-        <section className="py-16">
-            <div className="max-w-7xl mx-auto sm:px-5 lg:px-0">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:-translate-y-2 transition-transform">
-                        <a href="mailto:info@bauvision360.de">
-                            <div className="text-primary text-3xl mb-4">📧</div>
-                            <h3 className="text-xl font-semibold mb-2">E-Mail</h3>
-                            <p className="text-gray-600">info@bauvision360.de</p>
-                        </a>
-                    </div>
-                    <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:-translate-y-2 transition-transform">
-                        <a href="tel:+4915755267680">
-                            <div className="text-primary text-3xl mb-4">📱</div>
-                            <h3 className="text-xl font-semibold mb-2">Telefon</h3>
-                            <p className="text-gray-600">+49 (0) 1575 52 67 68 0</p>
-                        </a>
-                    </div>
-                    <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:-translate-y-2 transition-transform">
-                        <div className="text-primary text-3xl mb-4">🏢</div>
-                        <h3 className="text-xl font-semibold mb-2">Adresse</h3>
-                        <p className="text-gray-600">Oelder Straße 148a<br />59269 Beckum</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        {/* <section className="bg-lightGray py-16 px-5">
+        <section className="bg-lightGray py-16 px-5">
             <div className="max-w-7xl mx-auto bg-white p-8 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-bold text-primary mb-8">Schreiben Sie uns</h2>
                 {status && (
@@ -175,6 +160,33 @@ export default function ContactPage() {
                     </button>
                 </form>
             </div>
-        </section> */}
+        </section>
+
+        <section className="py-32 px-5">
+            <div className="max-w-7xl mx-auto sm:px-5 lg:px-0">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:-translate-y-2 transition-transform">
+                        <a href="mailto:info@bauvision360.de">
+                            <div className="text-primary text-3xl mb-4">📧</div>
+                            <h3 className="text-xl font-semibold mb-2">E-Mail</h3>
+                            <p className="text-gray-600">info@bauvision360.de</p>
+                        </a>
+                    </div>
+                    <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:-translate-y-2 transition-transform">
+                        <a href="tel:+4915755267680">
+                            <div className="text-primary text-3xl mb-4">📱</div>
+                            <h3 className="text-xl font-semibold mb-2">Telefon</h3>
+                            <p className="text-gray-600">+49 (0) 1575 52 67 68 0</p>
+                        </a>
+                    </div>
+                    <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:-translate-y-2 transition-transform">
+                        <div className="text-primary text-3xl mb-4">🏢</div>
+                        <h3 className="text-xl font-semibold mb-2">Adresse</h3>
+                        <p className="text-gray-600">Oelder Straße 148a<br />59269 Beckum</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    )
 }

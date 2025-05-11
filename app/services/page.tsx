@@ -180,7 +180,7 @@ export default function Services() {
               </div>
               <div className="text-center">
                 <Link
-                  href="/contact"
+                  href={`/contact?service=${encodeURIComponent(currentService.title)}`}
                   className="inline-block bg-primary hover:bg-secondary text-white px-8 py-4 rounded-md transition-colors"
                   onClick={(e) => e.target === e.currentTarget && closeModal()}
                 >
