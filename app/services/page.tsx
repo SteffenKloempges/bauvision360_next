@@ -8,6 +8,7 @@ import FadeIn from "@/app/components/FadeIn";
 
 export default function Services() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const [currentService, setCurrentService] = useState<ServiceData | null>(
     null
   );
@@ -17,6 +18,10 @@ export default function Services() {
     if (data) {
       setCurrentService(data);
       setIsModalOpen(true);
+      // Kurze Verzögerung, damit die initialen Styles angewendet werden können
+      requestAnimationFrame(() => {
+        setIsModalVisible(true);
+      });
       document.body.style.overflow = "hidden";
       return;
     }
@@ -25,15 +30,22 @@ export default function Services() {
     if (professionalData) {
       setCurrentService(professionalData);
       setIsModalOpen(true);
+      // Kurze Verzögerung, damit die initialen Styles angewendet werden können
+      requestAnimationFrame(() => {
+        setIsModalVisible(true);
+      });
       document.body.style.overflow = "hidden";
       return;
     }
   };
 
   const closeModal = () => {
-    setIsModalOpen(false);
-    setCurrentService(null);
-    document.body.style.overflow = "unset";
+    setIsModalVisible(false);
+    setTimeout(() => {
+      setIsModalOpen(false);
+      setCurrentService(null);
+      document.body.style.overflow = "unset";
+    }, 300);
   };
 
   return (
@@ -134,10 +146,10 @@ export default function Services() {
       {/* Modal */}
       {isModalOpen && currentService && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+          className={`fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 transition-opacity duration-300 ease-in-out ${isModalVisible ? 'opacity-100' : 'opacity-0'}`}
           onClick={(e) => e.target === e.currentTarget && closeModal()}
         >
-          <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+          <div className={`bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all duration-300 ease-in-out ${isModalVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}>
             <div className="p-8">
               <div className="flex justify-between items-start mb-6">
                 <h2 className="text-2xl font-bold text-primary">
