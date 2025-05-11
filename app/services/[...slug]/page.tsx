@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ServiceData, professionalServices, craftingServices, serviceData, ServiceDataMap } from '../services';
 import Link from "next/link";
 import Image from "next/image";
+import FadeIn from "@/app/components/FadeIn";
 
 const SingleService = () => {
     const pathname = usePathname();
@@ -43,53 +44,58 @@ const SingleService = () => {
 
     return <main className="pt-20 font-sans text-gray-800">
         <section className="px-5 py-16 lg:py-24 text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-primary leading-tight">
-                Unsere Leistungen
-            </h1>
-            <p className="text-xl text-gray-600">
-                Professionelle Baudienstleistungen aus einer Hand
-            </p>
+            <FadeIn>
+                <h1 className="text-4xl lg:text-5xl font-bold text-primary leading-tight">
+                    Unsere Leistungen
+                </h1>
+                <p className="text-xl text-gray-600">
+                    Professionelle Baudienstleistungen aus einer Hand
+                </p>
+            </FadeIn>
         </section>
         <section className="px-5 py-16">
             <div className={pathname.includes("professional") ? "lg:grid-cols-2 max-w-7xl mx-auto grid md:grid-cols-2 gap-8 " : "lg:grid-cols-4 max-w-7xl mx-auto grid md:grid-cols-2 gap-8 "}>
                 {Object.entries(dataState).map(([key, service]) => (
-                    <div
-                        key={key}
-                        className="bg-white p-8 rounded-lg shadow-lg hover:-translate-y-1 transition-transform cursor-pointer"
-                        onClick={() => openModal(key)}
-                    >
-                        <div className="w-full h-48 relative mb-4 rounded overflow-hidden">
-              <Image
-                src={service.image}
-                layout="fill"
-                alt={service.title}
-                objectFit="cover"
-              />
-              </div>
-                        <h3 className="text-xl font-bold text-primary mb-4">
-                            {service.title}
-                        </h3>
-                        <p className="text-gray-600">{service.description}</p>
-                    </div>
+                    <FadeIn key={key}>
+                        <div
+                            className="bg-white p-8 rounded-lg shadow-lg hover:-translate-y-1 transition-transform cursor-pointer h-full flex flex-col"
+                            onClick={() => openModal(key)}
+                        >
+                            <div className="w-full h-48 relative mb-4 rounded overflow-hidden">
+                                <Image
+                                    src={service.image}
+                                    layout="fill"
+                                    alt={service.title}
+                                    objectFit="cover"
+                                />
+                            </div>
+                            <h3 className="text-xl font-bold text-primary mb-4">
+                                {service.title}
+                            </h3>
+                            <p className="text-gray-600 flex-grow">{service.description}</p>
+                        </div>
+                    </FadeIn>
                 ))}
             </div>
         </section>
 
         <section className="py-16 px-5 text-center">
-            <div className="max-w-2xl mx-auto space-y-6">
-                <h2 className="text-3xl font-bold text-primary">
-                    Interesse an unseren Leistungen?
-                </h2>
-                <p className="text-gray-600">
-                    Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch.
-                </p>
-                <Link
-                    href="/contact"
-                    className="inline-block bg-primary hover:bg-secondary text-white px-8 py-4 rounded-md transition-colors"
-                >
-                    Jetzt anfragen
-                </Link>
-            </div>
+            <FadeIn>
+                <div className="max-w-2xl mx-auto space-y-6">
+                    <h2 className="text-3xl font-bold text-primary">
+                        Interesse an unseren Leistungen?
+                    </h2>
+                    <p className="text-gray-600">
+                        Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch.
+                    </p>
+                    <Link
+                        href="/contact"
+                        className="inline-block bg-primary hover:bg-secondary text-white px-8 py-4 rounded-md transition-colors"
+                    >
+                        Jetzt anfragen
+                    </Link>
+                </div>
+            </FadeIn>
         </section>
 
         {/* Modal */}

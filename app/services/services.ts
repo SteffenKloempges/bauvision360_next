@@ -49,10 +49,10 @@ export const serviceData: ServiceDataMap = {
             "Tapezieren von Raufasertapete",
             "Überstreichen in Ihrer Wunschfarbe",
         ],
-        image: "/images/services/06_Maler.webp"
+        image: "/images/services/03_Tapezier-und-Streicharbeiten.webp"
     },
     demontage_und_abbruch: {
-        title: "Demontage & Abbruch",
+        title: "Demontage und Abbruch",
         description:
             "Wir führen fachgerechte Demontage- und Abbrucharbeiten für Renovierungen, Umbauten oder Neubauten durch – schnell, sauber und professionell. Abbruch und Demontage von…",
         features: [
@@ -64,10 +64,10 @@ export const serviceData: ServiceDataMap = {
         ],
         nachtrag:
             "inkl. fachgerechter Entsorgung. Gerne übernehmen wir auch die Bestellung eines Bauschutt-Containers.",
-        image: "/images/Bauvision_logo.svg"
+        image: "/images/services/06_Demontage-und-Abbrucharbeiten.webp"
     },
     pflaster_und_gartenarbeiten: {
-        title: "Pflaster- & Gartenarbeiten",
+        title: "Pflaster- und Gartenarbeiten",
         description:
             "Wir gestalten Ihren Garten zu Ihren Wünschen und Ihrer Zufriedenheit. Kleine Pflasterflächen sowie Terrassenanpassungen nach Ihren Vorstellungen.",
         features: [
@@ -79,7 +79,7 @@ export const serviceData: ServiceDataMap = {
         image: "/images/services/10_Garten.webp"
     },
     entruempelung_und_haushaltsaufloesung: {
-        title: "Entrümpelung & Haushaltsauflösung",
+        title: "Entrümpelung und Haushaltsauflösung",
         description:
             "Wir entrümpeln Keller, Dachböden und ganze Haushalte schnell, zuverlässig und umweltgerecht – inklusive fachgerechter Entsorgung.",
         features: [
@@ -90,7 +90,7 @@ export const serviceData: ServiceDataMap = {
             "Transparente Preisgestaltung",
             "Wiederverwertung brauchbarer Gegenstände",
         ],
-        image: "/images/Bauvision_logo.svg"
+        image: "/images/services/07_Entrümpelungen-und-Haushaltsauflösungen.webp"
     },
     kuechenmontage: {
         title: "Küchenmontage",
@@ -107,7 +107,7 @@ export const serviceData: ServiceDataMap = {
         image: "/images/services/07_Küche.webp"
     },
     tuer_und_fenstermontage: {
-        title: "Tür- & Fenstermontage",
+        title: "Tür- und Fenstermontage",
         description:
             "Wir montieren Innentüren und Fensteranlagen aus Kunststoff fachgerecht und optisch ansprechend.",
         features: [
@@ -149,12 +149,11 @@ export const serviceData: ServiceDataMap = {
         description:
             "Wir vermieten Bautrocknungs- sowie Bauheizgeräte für Ihr Bauvorhaben.",
         features: ["Entfeuchtungsgeräte", "Elektronische Heizgeräte/-lüfter "],
-        image: "/images/Bauvision_logo.svg"
+        image: "/images/services/011_Vermietung-von-Baugeräten.webp"
     }
 };
 
 export const craftingServices: ServiceDataMap = {
-    // ... existing code ...
     trockenbau: {
         title: "Trockenbau",
         description:
@@ -193,48 +192,19 @@ export const craftingServices: ServiceDataMap = {
             "Tapezieren von Raufasertapete",
             "Überstreichen in Ihrer Wunschfarbe",
         ],
-        image: "/images/services/06_Maler.webp"
+        image: "/images/services/03_Tapezier-und-Streicharbeiten.webp"
     },
-    demontage_und_abbruch: {
-        title: "Demontage & Abbruch",
+    tuer_und_fenstermontage: {
+        title: "Tür- und Fenstermontage",
         description:
-            "Wir führen fachgerechte Demontage- und Abbrucharbeiten für Renovierungen, Umbauten oder Neubauten durch – schnell, sauber und professionell. Abbruch und Demontage von…",
+            "Wir montieren Innentüren und Fensteranlagen aus Kunststoff fachgerecht und optisch ansprechend.",
         features: [
-            "Bodenbelägen",
-            "Trockenbau- und Holzrahmenbau",
-            "Türen und Fenstern",
-            "Sanitär- und Heizungs-Elemente",
-            "Küchen und Möbel",
+            "Demontage Ihrer alten Innentür und Fenster",
+            "Aufmaß und Bemusterung für Ihre neue Tür ",
+            "Lieferung und Montage ",
+            "Kürzen von Bestandstüren",
         ],
-        nachtrag:
-            "inkl. fachgerechter Entsorgung. Gerne übernehmen wir auch die Bestellung eines Bauschutt-Containers.",
-        image: "/images/Bauvision_logo.svg"
-    },
-    pflaster_und_gartenarbeiten: {
-        title: "Pflaster- & Gartenarbeiten",
-        description:
-            "Wir gestalten Ihren Garten zu Ihren Wünschen und Ihrer Zufriedenheit. Kleine Pflasterflächen sowie Terrassenanpassungen nach Ihren Vorstellungen.",
-        features: [
-            "Rasenmähen",
-            "Grünschnitt",
-            "Beete anlegen und bepflanzen",
-            "Verlegung von Pflasterflächen und Randsteine",
-        ],
-        image: "/images/services/10_Garten.webp"
-    },
-    entruempelung_und_haushaltsaufloesung: {
-        title: "Entrümpelung & Haushaltsauflösung",
-        description:
-            "Wir entrümpeln Keller, Dachböden und ganze Haushalte schnell, zuverlässig und umweltgerecht – inklusive fachgerechter Entsorgung.",
-        features: [
-            "Professionelle Entrümpelung",
-            "Besenreine Haushaltsauflösungen",
-            "Schnelle & diskrete Abwicklung",
-            "Umweltgerechte Entsorgung",
-            "Transparente Preisgestaltung",
-            "Wiederverwertung brauchbarer Gegenstände",
-        ],
-        image: "/images/Bauvision_logo.svg"
+        image: "/images/services/08_Tür.webp"
     },
     kuechenmontage: {
         title: "Küchenmontage",
@@ -250,17 +220,34 @@ export const craftingServices: ServiceDataMap = {
         ],
         image: "/images/services/07_Küche.webp"
     },
-    tuer_und_fenstermontage: {
-        title: "Tür- & Fenstermontage",
+    demontage_und_abbruch: {
+        title: "Demontage und Abbruch",
         description:
-            "Wir montieren Innentüren und Fensteranlagen aus Kunststoff fachgerecht und optisch ansprechend.",
+            "Wir führen fachgerechte Demontage- und Abbrucharbeiten für Renovierungen, Umbauten oder Neubauten durch – schnell, sauber und professionell. Abbruch und Demontage von…",
         features: [
-            "Demontage Ihrer alten Innentür und Fenster",
-            "Aufmaß und Bemusterung für Ihre neue Tür ",
-            "Lieferung und Montage ",
-            "Kürzen von Bestandstüren",
+            "Bodenbelägen",
+            "Trockenbau- und Holzrahmenbau",
+            "Türen und Fenstern",
+            "Sanitär- und Heizungs-Elemente",
+            "Küchen und Möbel",
         ],
-        image: "/images/services/08_Tür.webp"
+        nachtrag:
+            "inkl. fachgerechter Entsorgung. Gerne übernehmen wir auch die Bestellung eines Bauschutt-Containers.",
+        image: "/images/services/06_Demontage-und-Abbrucharbeiten.webp"
+    },
+    entruempelung_und_haushaltsaufloesung: {
+        title: "Entrümpelung und Haushaltsauflösung",
+        description:
+            "Wir entrümpeln Keller, Dachböden und ganze Haushalte schnell, zuverlässig und umweltgerecht – inklusive fachgerechter Entsorgung.",
+        features: [
+            "Professionelle Entrümpelung",
+            "Besenreine Haushaltsauflösungen",
+            "Schnelle & diskrete Abwicklung",
+            "Umweltgerechte Entsorgung",
+            "Transparente Preisgestaltung",
+            "Wiederverwertung brauchbarer Gegenstände",
+        ],
+        image: "/images/services/07_Entrümpelungen-und-Haushaltsauflösungen.webp"
     },
     transport: {
         title: "Transport und Klein-Umzüge",
@@ -274,6 +261,18 @@ export const craftingServices: ServiceDataMap = {
             "Transparente Preisgestaltung",
         ],
         image: "/images/services/09_Umzug.webp"
+    },
+    pflaster_und_gartenarbeiten: {
+        title: "Pflaster- und Gartenarbeiten",
+        description:
+            "Wir gestalten Ihren Garten zu Ihren Wünschen und Ihrer Zufriedenheit. Kleine Pflasterflächen sowie Terrassenanpassungen nach Ihren Vorstellungen.",
+        features: [
+            "Rasenmähen",
+            "Grünschnitt",
+            "Beete anlegen und bepflanzen",
+            "Verlegung von Pflasterflächen und Randsteine",
+        ],
+        image: "/images/services/10_Garten.webp"
     },
     winterdienst: {
         title: "Winterdienst und Schneeräumung für Privatpersonen",
@@ -293,7 +292,7 @@ export const craftingServices: ServiceDataMap = {
         description:
             "Wir vermieten Bautrocknungs- sowie Bauheizgeräte für Ihr Bauvorhaben.",
         features: ["Entfeuchtungsgeräte", "Elektronische Heizgeräte/-lüfter "],
-        image: "/images/Bauvision_logo.svg"
+        image: "/images/services/011_Vermietung-von-Baugeräten.webp"
     }
 };
 

@@ -7,82 +7,147 @@ import Logo from "../../images/Bauvision_logo.svg";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
-  function toggleNav() {
+  const toggleMenu = () => {
     setIsOpen(!isOpen);
-    document.body.classList.toggle("modal-open", !isOpen);
-  }
+    document.body.style.overflow = !isOpen ? "hidden" : "auto";
+  };
 
-  function closeNav() {
+  const closeMenu = () => {
     setIsOpen(false);
-    document.body.classList.remove("modal-open");
-  }
+    document.body.style.overflow = "auto";
+  };
 
   return (
-    <header className="sticky top-0 w-full bg-white shadow-md z-50">
-      <nav className="relative max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
-        <Link
-          href="/"
-          className="text-2xl font-bold text-primary hover:text-secondary transition-colors relative z-50"
-        >
-          <Image
-            src={Logo}
-            alt="Das Logo von Bauvision360"
-            width={175}
-            height={100}
-          />
-        </Link>
-        <button
-          className={`mobile-nav-toggle lg:hidden relative z-50 ${isOpen ? "active" : ""
-            }`}
-          aria-label="Menü öffnen"
-          onClick={toggleNav}
-        >
-          <div className="space-y-2">
-            <span className="block w-6 h-0.5 bg-primary"></span>
-            <span className="block w-6 h-0.5 bg-primary"></span>
-            <span className="block w-6 h-0.5 bg-primary"></span>
+    <>
+      <header className="sticky top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-20">
+            {/* Logo */}
+            <Link href="/" className="flex-shrink-0">
+              <Image
+                src={Logo}
+                alt="Bauvision360 Logo"
+                width={175}
+                height={100}
+                priority
+              />
+            </Link>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex space-x-8">
+              <Link
+                href="/"
+                className="duration-200 font-medium bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-md transition-colors"
+              >
+                Startseite
+              </Link>
+              <Link
+                href="/about"
+                className="duration-200 font-medium bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-md transition-colors"
+              >
+                Über uns
+              </Link>
+              <Link
+                href="/services"
+                className="duration-200 font-medium bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-md transition-colors"
+              >
+                Leistungen
+              </Link>
+              <Link
+                href="/contact"
+                className="duration-200 font-medium bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-md transition-colors"
+              >
+                Kontakt
+              </Link>
+            </nav>
+
+            {/* Mobile menu button */}
+            <button
+              onClick={toggleMenu}
+              className="md:hidden inline-flex items-center justify-center p-2 mr-4 rounded-md text-primary focus:outline-none"
+              aria-expanded={isOpen}
+            >
+              <span className="sr-only">Menü öffnen</span>
+              <div className="relative w-6 h-12">
+                <span
+                  className={`absolute block w-10 h-1 bg-current transform transition-all duration-300 ease-in-out rounded ${
+                    isOpen ? "rotate-45 top-5" : "top-2"
+                  }`}
+                />
+                <span
+                  className={`absolute block w-10 h-1 bg-current transform transition-all duration-300 ease-in-out rounded ${
+                    isOpen ? "opacity-0" : "opacity-100"
+                  } top-5`}
+                />
+                <span
+                  className={`absolute block w-10 h-1 bg-current transform transition-all duration-300 ease-in-out rounded ${
+                    isOpen ? "-rotate-45 top-5" : "top-8"
+                  }`}
+                />
+              </div>
+            </button>
           </div>
-        </button>
-        <div
-          className={`nav-links ${isOpen ? "active" : ""
-            } lg:flex flex-col lg:flex-row bg-white lg:bg-transparent p-5 lg:p-0 fixed lg:relative top-0 lg:top-auto left-0 w-full lg:w-auto h-screen lg:h-auto pt-24 lg:pt-0 z-40 gap-4 justify-center items-center text-center`}
-        >
-          <Link
-            href="/"
-            className="block w-full lg:w-auto bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-md transition-colors"
-            onClick={closeNav}
-          >
-            Start
-          </Link>
-          <Link
-            href="/about"
-            className="block w-full lg:w-auto bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-md transition-colors"
-            onClick={closeNav}
-          >
-            Über uns
-          </Link>
-          <Link
-            href="/services"
-            className="block w-full lg:w-auto bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-md transition-colors"
-            onClick={closeNav}
-          >
-            Leistungen
-          </Link>
-          <Link
-            href="/contact"
-            className="block w-full lg:w-auto bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-md transition-colors"
-            onClick={closeNav}
-          >
-            Kontakt
-          </Link>
         </div>
-        {isOpen && (
-          <div
-            className="fixed inset-0 bg-black/50 z-30"
-            onClick={closeNav}
-          ></div>
-        )}
-      </nav>
-    </header>
+      </header>
+
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="md:hidden fixed inset-0 bg-white z-40">
+          <div className="h-full flex flex-col">
+            <div className="flex justify-end p-4">
+              <button
+                onClick={closeMenu}
+                className="p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none"
+              >
+                <span className="sr-only">Menü schließen</span>
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <nav className="flex-1 flex flex-col justify-center items-center space-y-8 px-12">
+              <Link
+                href="/"
+                className="duration-200 text-3xl bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-md transition-colors w-full text-center"
+                onClick={closeMenu}
+              >
+                Startseite
+              </Link>
+              <Link
+                href="/about"
+                className="duration-200 text-3xl bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-md transition-colors w-full text-center"
+                onClick={closeMenu}
+              >
+                Über uns
+              </Link>
+              <Link
+                href="/services"
+                className="duration-200 text-3xl bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-md transition-colors w-full text-center"
+                onClick={closeMenu}
+              >
+                Leistungen
+              </Link>
+              <Link
+                href="/contact"
+                className="duration-200 text-3xl bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-md transition-colors w-full text-center"
+                onClick={closeMenu}
+              >
+                Kontakt
+              </Link>
+            </nav>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
