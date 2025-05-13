@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Marcel from "../../images/Marcel_Lenckowski.png";
 // import Fabian from "../../images/Fabian_Reitemeier.png";
-
-import AboutImage from '@/images/services/NEU_Bauleitung.webp';
 import FadeIn from "@/app/components/FadeIn";
 
 export default function About() {
