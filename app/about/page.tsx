@@ -7,8 +7,8 @@ import FadeIn from "@/app/components/FadeIn";
 
 export default function About() {
   return (
-    <main className="pt-20 font-sans text-gray-800">
-      <section className="px-5 py-16 lg:py-24 text-center">
+    <main className="pt-10 font-sans text-gray-800">
+      <section className="px-5 py-8 lg:py-12 text-center">
         <FadeIn>
           <h1 className="text-4xl lg:text-5xl font-bold text-primary leading-tight">
             Über BAUvision360&deg;
@@ -18,18 +18,8 @@ export default function About() {
           </p>
         </FadeIn>
       </section>
-      <section className="px-5 py-16">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
-          <FadeIn>
-            <Image
-              src={AboutImage}
-              width={500}
-              height={600}
-              alt=''
-              className="rounded mx-auto"
-            />
-          </FadeIn>
-
+      <section className="px-5 py-8">
+        <div className="max-w-4xl mx-auto gap-16">
           <FadeIn>
             <div className="">
               <h2 className="text-3xl font-bold text-primary mb-6">

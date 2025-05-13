@@ -49,8 +49,8 @@ export default function Services() {
   };
 
   return (
-    <main className="pt-20 font-sans text-gray-800">
-      <section className="px-5 py-16 lg:py-24 text-center">
+    <main className="pt-10 font-sans text-gray-800">
+      <section className="px-5 py-8 lg:py-12 text-center">
         <FadeIn>
           <h1 className="text-4xl lg:text-5xl font-bold text-primary leading-tight">
             Handwerkliche Leistungen
@@ -60,7 +60,7 @@ export default function Services() {
           </p>
         </FadeIn>
       </section>
-      <section className="px-5 py-16">
+      <section className="px-5 py-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {Object.entries(serviceData).map(([key, service]) => (
             <FadeIn key={key}>
@@ -91,11 +91,11 @@ export default function Services() {
             Koordinierende Leistungen
           </h1>
           <p className="text-xl text-gray-600">
-            Professionelle Baudienstleistungen aus einer Hand
+            Professionelle Unterstützung für Ihr Projekt
           </p>
         </FadeIn>
       </section>
-      <section className="px-5 py-16">
+      <section className="px-5 pb-16">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
           {Object.entries(professionalServices).map(([key, service]) => (
             <FadeIn key={key}>

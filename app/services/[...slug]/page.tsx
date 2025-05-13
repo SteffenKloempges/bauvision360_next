@@ -42,18 +42,18 @@ const SingleService = () => {
         document.body.style.overflow = "unset";
     };
 
-    return <main className="pt-20 font-sans text-gray-800">
-        <section className="px-5 py-16 lg:py-24 text-center">
+    return <main className="pt-10 font-sans text-gray-800">
+        <section className="px-5 py-8 lg:py-12 text-center">
             <FadeIn>
                 <h1 className="text-4xl lg:text-5xl font-bold text-primary leading-tight">
-                    Unsere Leistungen
+                    {pathname.includes("professional") ? "Koordinierende Leistungen" : "Handwerkliche Leistungen"}
                 </h1>
                 <p className="text-xl text-gray-600">
-                    Professionelle Baudienstleistungen aus einer Hand
+                    {pathname.includes("professional") ? "Professionelle Unterstützung für Ihr Projekt" : "Handwerkliche Leistungen"}
                 </p>
             </FadeIn>
         </section>
-        <section className="px-5 py-16">
+        <section className="px-5 py-8">
             <div className={pathname.includes("professional") ? "lg:grid-cols-2 max-w-7xl mx-auto grid md:grid-cols-2 gap-8 " : "lg:grid-cols-4 max-w-7xl mx-auto grid md:grid-cols-2 gap-8 "}>
                 {Object.entries(dataState).map(([key, service]) => (
                     <FadeIn key={key}>

@@ -8,7 +8,7 @@ import FadeIn from "@/app/components/FadeIn";
 export default function Home() {
   return (
     <main className="font-sans text-gray-800">
-      <section className="pt-24 lg:pt-32 px-5">
+      <section className="pt-12 lg:pt-16 px-5">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
           <div className="flex flex-col justify-center space-y-8 h-96">
             <h1 className="text-4xl lg:text-5xl font-bold text-primary leading-tight">
@@ -38,7 +38,7 @@ export default function Home() {
             <FadeIn>
               <Link
                 href="/services/professional"
-                className="block bg-white rounded-lg shadow-lg hover:-translate-y-1 transition-transform overflow-hidden"
+                className="block bg-white rounded-lg shadow-lg hover:-translate-y-1 transition-transform overflow-hidden group"
               >
                 <div className="relative w-full h-72">
                   <Image
@@ -49,11 +49,11 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-2">
-                    Koordinierung
+                  <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-all duration-300">
+                    Baustellen-Koordinierung
                   </h3>
                   <p className="text-gray-600">
-                    Professionelle Unterstützung an Ihr Projekt
+                    Professionelle Unterstützung für Ihr Projekt
                   </p>
                 </div>
               </Link>
@@ -61,7 +61,7 @@ export default function Home() {
             <FadeIn>
               <Link
                 href="/services/crafting"
-                className="block bg-white rounded-lg shadow-lg hover:-translate-y-1 transition-transform overflow-hidden"
+                className="block bg-white rounded-lg shadow-lg hover:-translate-y-1 transition-transform overflow-hidden group"
               >
                 <div className="relative w-full h-72">
                   <Image
@@ -72,11 +72,11 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-2">
+                  <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-all duration-300">
                     Handwerkliche Gewerke
                   </h3>
                   <p className="text-gray-600">
-                    Handwerkliche Unterstützung für Ihr Projekt
+                    Fachexpertise für Ihr Bauvorhaben
                   </p>
                 </div>
               </Link>

@@ -40,7 +40,7 @@ export const serviceData: ServiceDataMap = {
         image: "/images/services/04_Boden.webp"
     },
     tapezier_streicharbeiten: {
-        title: "Tapezier und Streicharbeit",
+        title: "Tapezier- und Streicharbeit",
         description:
             "Wir tapezieren Ihre Räumlichkeiten mit Raufasertapete durch modernste Techniken und Überstreichen diese mit Bindefarbe.",
         features: [

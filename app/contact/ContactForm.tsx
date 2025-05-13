@@ -79,13 +79,12 @@ export default function ContactForm() {
 
     return (
         <>
-            <section className="bg-lightGray py-16 px-5">
-                <div className="max-w-7xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+            <section className="py-8 px-5">
+                <div className="max-w-7xl mx-auto bg-white p-8 rounded-lg shadow-lg border-1.5 border-secondary">
                     <h2 className="text-2xl font-bold text-primary mb-8">Schreiben Sie uns</h2>
                     {status && (
-                        <div className={`p-4 mb-6 rounded-md ${
-                            status.type === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
-                        }`}>
+                        <div className={`p-4 mb-6 rounded-md ${status.type === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+                            }`}>
                             {status.message}
                         </div>
                     )}
@@ -95,7 +94,7 @@ export default function ContactForm() {
                             <input type="text" id="name" name="name" required
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
+                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                                 placeholder="Geben Sie bitte Ihren Vor- und Nachnamen an" />
                         </div>
                         <div className="space-y-2">
@@ -103,7 +102,7 @@ export default function ContactForm() {
                             <input type="email" id="email" name="email" required
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
+                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                                 placeholder="Bitte geben Sie Ihre E-Mail-Adresse ein" />
                         </div>
                         <div className="space-y-2">
@@ -111,7 +110,7 @@ export default function ContactForm() {
                             <input type="tel" id="phone" name="phone"
                                 value={formData.phone}
                                 onChange={handleChange}
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
+                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                                 placeholder="Bitte geben Sie Ihre Telefonnummer ein" />
                         </div>
                         <div className="space-y-2">
@@ -126,7 +125,7 @@ export default function ContactForm() {
                             <input type="text" id="service" name="service" required
                                 value={formData.service}
                                 onChange={handleChange}
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
+                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                                 placeholder="Was können wir für Sie tun? z.B. Trockenbau, Sanierung, etc." />
                         </div>
                         <div className="space-y-2">
@@ -134,11 +133,11 @@ export default function ContactForm() {
                             <textarea id="message" name="message" rows={5} required
                                 value={formData.message}
                                 onChange={handleChange}
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
+                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                                 placeholder="Beschreiben Sie hier Ihr Projekt und Ihre Anforderungen..."></textarea>
                         </div>
                         <div className="flex items-start gap-2">
-                            <input type="checkbox" id="privacy" name="privacy" required 
+                            <input type="checkbox" id="privacy" name="privacy" required
                                 checked={formData.privacy}
                                 onChange={handleChange}
                                 className="mt-1.5" />
