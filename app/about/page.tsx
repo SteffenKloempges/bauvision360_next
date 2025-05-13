@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Marcel from "../../images/Marcel_Lenckowski.png";
-// import Fabian from "../../images/Fabian_Reitemeier.png";
 import FadeIn from "@/app/components/FadeIn";
 
 export default function About() {
@@ -71,21 +70,6 @@ export default function About() {
                 </p>
               </div>
             </FadeIn>
-            {/* <div className="">
-              <Image
-                src={Fabian}
-                alt="Marcel Lenckowski"
-                className="w-full mb-6 rounded-lg"
-                width={300}
-                height={300}
-              />
-              <h3 className="text-xl font-bold text-primary">
-                Fabian Reitemeier
-              </h3>
-              <p className="text-gray-600">Bauleitung</p>
-              <p className="text-gray-600">Trockenbauer</p>
-              <p className="text-gray-600">Gelernter Tischler / Bodenleger</p>
-            </div> */}
           </div>
         </div>
       </section>

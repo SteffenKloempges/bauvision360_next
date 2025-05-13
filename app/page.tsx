@@ -38,7 +38,7 @@ export default function Home() {
             <FadeIn>
               <Link
                 href="/services/professional"
-                className="block bg-white rounded-lg shadow-lg hover:-translate-y-1 transition-transform overflow-hidden group"
+                className="block bg-white rounded-lg shadow-lg hover:-translate-y-1 transition-transform overflow-hidden group h-full"
               >
                 <div className="relative w-full h-72">
                   <Image
@@ -61,7 +61,7 @@ export default function Home() {
             <FadeIn>
               <Link
                 href="/services/crafting"
-                className="block bg-white rounded-lg shadow-lg hover:-translate-y-1 transition-transform overflow-hidden group"
+                className="block bg-white rounded-lg shadow-lg hover:-translate-y-1 transition-transform overflow-hidden group h-full"
               >
                 <div className="relative w-full h-72">
                   <Image

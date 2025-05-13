@@ -21,7 +21,7 @@ export default function FadeIn({ children, className = '' }: FadeInProps) {
         }
       },
       {
-        threshold: 0.1,
+        threshold: 0.8,
         rootMargin: '50px',
       }
     );

@@ -6,7 +6,6 @@ export async function POST(request: Request) {
         const body = await request.json();
         const { name, email, phone, date, service, message } = body;
 
-        // E-Mail-Transport konfigurieren
         const transporter = nodemailer.createTransport({
             host: 'smtp.strato.de',
             port: 587,
@@ -17,7 +16,6 @@ export async function POST(request: Request) {
             }
         });
 
-        // E-Mail an BAUvision360
         const mailOptions = {
             from: process.env.EMAIL_USER,
             to: 'info@bauvision360.de',
@@ -34,7 +32,6 @@ export async function POST(request: Request) {
             `
         };
 
-        // Bestätigungs-E-Mail an den Kunden
         const confirmationMailOptions = {
             from: process.env.EMAIL_USER,
             to: email,
@@ -52,7 +49,6 @@ export async function POST(request: Request) {
             `
         };
 
-        // Beide E-Mails senden
         await Promise.all([
             transporter.sendMail(mailOptions),
             transporter.sendMail(confirmationMailOptions)
