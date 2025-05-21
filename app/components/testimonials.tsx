@@ -73,7 +73,7 @@ const Testimonials = () => {
             spaceBetween={20}
             slidesPerView={1}
             autoplay={{
-              delay: 3000,
+              delay: 5000,
               disableOnInteraction: false,
             }}
             className="w-full"
