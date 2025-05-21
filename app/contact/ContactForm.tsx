@@ -114,8 +114,8 @@ export default function ContactForm() {
                                 placeholder="Bitte geben Sie Ihre Telefonnummer ein" />
                         </div>
                         <div className="space-y-2">
-                            <label htmlFor="date" className="block font-medium">Ausführungszeitraum <span className="text-red-500">*</span></label>
-                            <input type="date" id="date" name="date" required
+                            <label htmlFor="date" className="block font-medium">Ausführungszeitraum</label>
+                            <input type="date" id="date" name="date"
                                 value={formData.date}
                                 onChange={handleChange}
                                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />

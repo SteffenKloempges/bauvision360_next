@@ -1,10 +1,10 @@
 import Link from "next/link";
 import ImageSlider from "@/app/components/imageSlider";
-import ImageKoordinierung from '@/images/services/NEU_Bauleitung.webp';
-import ImageGewerke from '@/images/services/03_Trockenbau.webp';
+import ImageKoordinierung from "@/images/services/NEU_Bauleitung.webp";
+import ImageGewerke from "@/images/services/03_Trockenbau.webp";
 import Image from "next/image";
 import FadeIn from "@/app/components/FadeIn";
-
+import Testimonials from "@/app/components/testimonials";
 export default function Home() {
   return (
     <main className="font-sans text-gray-800">
@@ -84,35 +84,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-lightGray py-24">
-        <div className="max-w-7xl mx-auto px-5">
-          <FadeIn>
-            <h2 className="text-3xl font-bold text-primary text-center mb-16">
-              Das sagen unsere Kunden
-            </h2>
-          </FadeIn>
-          <div className="grid md:grid-cols-2 gap-8">
-            <FadeIn>
-              <div className="bg-white p-8 rounded-lg shadow-lg">
-                <p className="mb-4">
-                  Hervorragende Qualität und termingerechte Fertigstellung.
-                </p>
-                <cite className="block text-primary font-medium">
-                  - Michael S., Projektentwickler
-                </cite>
-              </div>
-            </FadeIn>
-            <FadeIn>
-              <div className="bg-white p-8 rounded-lg shadow-lg">
-                <p className="mb-4">Kompetente Beratung von Anfang bis Ende.</p>
-                <cite className="block text-primary font-medium">
-                  - Sandra M., Privatkundin
-                </cite>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      <Testimonials />
     </main>
   );
 }

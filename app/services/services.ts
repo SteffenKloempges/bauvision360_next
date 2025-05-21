@@ -40,7 +40,7 @@ export const serviceData: ServiceDataMap = {
         image: "/images/services/04_Boden.webp"
     },
     tapezier_streicharbeiten: {
-        title: "Tapezier- und Streicharbeit",
+        title: "Tapezier und Streicharbeit",
         description:
             "Wir tapezieren Ihre Räumlichkeiten mit Raufasertapete durch modernste Techniken und Überstreichen diese mit Bindefarbe.",
         features: [
@@ -50,6 +50,32 @@ export const serviceData: ServiceDataMap = {
             "Überstreichen in Ihrer Wunschfarbe",
         ],
         image: "/images/services/03_Tapezier-und-Streicharbeiten.webp"
+    },
+    tuer_und_fenstermontage: {
+        title: "Tür- und Fenstermontage",
+        description:
+            "Wir montieren Innentüren und Fensteranlagen aus Kunststoff fachgerecht und optisch ansprechend.",
+        features: [
+            "Demontage Ihrer alten Innentür und Fenster",
+            "Aufmaß und Bemusterung für Ihre neue Tür ",
+            "Lieferung und Montage ",
+            "Kürzen von Bestandstüren",
+        ],
+        image: "/images/services/08_Tür.webp"
+    },
+    kuechenmontage: {
+        title: "Küchenmontage",
+        description:
+            "Wir montieren Ihre Küche professionell und passgenau – von Schränken über Arbeitsplatten bis zum Einbau der Elektrogeräte.",
+        features: [
+            "Küchenplanung",
+            "Präzise Montage Ihrer Küchenzeile und Möbelstücke",
+            "Einbau von Elektrogeräten",
+            "Vorbereitung für Wasser- und Starkstromanschlüsse",
+            "Demontage und Entsorgung Ihrer alten Küche",
+            "Transport und Lieferung Ihrer bestellten Küche (auch von Privatverkäufern)",
+        ],
+        image: "/images/services/07_Küche.webp"
     },
     demontage_und_abbruch: {
         title: "Demontage und Abbruch",
@@ -66,18 +92,6 @@ export const serviceData: ServiceDataMap = {
             "inkl. fachgerechter Entsorgung. Gerne übernehmen wir auch die Bestellung eines Bauschutt-Containers.",
         image: "/images/services/06_Demontage-und-Abbrucharbeiten.webp"
     },
-    pflaster_und_gartenarbeiten: {
-        title: "Pflaster- und Gartenarbeiten",
-        description:
-            "Wir gestalten Ihren Garten zu Ihren Wünschen und Ihrer Zufriedenheit. Kleine Pflasterflächen sowie Terrassenanpassungen nach Ihren Vorstellungen.",
-        features: [
-            "Rasenmähen",
-            "Grünschnitt",
-            "Beete anlegen und bepflanzen",
-            "Verlegung von Pflasterflächen und Randsteine",
-        ],
-        image: "/images/services/10_Garten.webp"
-    },
     entruempelung_und_haushaltsaufloesung: {
         title: "Entrümpelung und Haushaltsauflösung",
         description:
@@ -92,32 +106,6 @@ export const serviceData: ServiceDataMap = {
         ],
         image: "/images/services/07_Entrümpelungen-und-Haushaltsauflösungen.webp"
     },
-    kuechenmontage: {
-        title: "Küchenmontage",
-        description:
-            "Wir montieren Ihre Küche professionell und passgenau – von Schränken über Arbeitsplatten bis zum Einbau der Elektrogeräte.",
-        features: [
-            "Küchenplanung",
-            "Präzise Montage Ihrer Küchenzeile und Möbelstücke",
-            "Einbau von Elektrogeräten",
-            "Vorbereitung für Wasser- und Starkstromanschlüsse",
-            "Demontage und Entsorgung Ihrer alten Küche",
-            "Transport und Lieferung Ihrer bestellten Küche (auch von Privatverkäufern)",
-        ],
-        image: "/images/services/07_Küche.webp"
-    },
-    tuer_und_fenstermontage: {
-        title: "Tür- und Fenstermontage",
-        description:
-            "Wir montieren Innentüren und Fensteranlagen aus Kunststoff fachgerecht und optisch ansprechend.",
-        features: [
-            "Demontage Ihrer alten Innentür und Fenster",
-            "Aufmaß und Bemusterung für Ihre neue Tür ",
-            "Lieferung und Montage ",
-            "Kürzen von Bestandstüren",
-        ],
-        image: "/images/services/08_Tür.webp"
-    },
     transport: {
         title: "Transport und Klein-Umzüge",
         description:
@@ -130,6 +118,18 @@ export const serviceData: ServiceDataMap = {
             "Transparente Preisgestaltung",
         ],
         image: "/images/services/09_Umzug.webp"
+    },
+    pflaster_und_gartenarbeiten: {
+        title: "Pflaster- und Gartenarbeiten",
+        description:
+            "Wir gestalten Ihren Garten zu Ihren Wünschen und Ihrer Zufriedenheit. Kleine Pflasterflächen sowie Terrassenanpassungen nach Ihren Vorstellungen.",
+        features: [
+            "Rasenmähen",
+            "Grünschnitt",
+            "Beete anlegen und bepflanzen",
+            "Verlegung von Pflasterflächen und Randsteine",
+        ],
+        image: "/images/services/10_Garten.webp"
     },
     winterdienst: {
         title: "Winterdienst und Schneeräumung für Privatpersonen",
