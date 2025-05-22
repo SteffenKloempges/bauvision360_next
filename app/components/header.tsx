@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../images/Bauvision_logo.jpg";
+import Logo from "../../images/Bauvision_Logo_transparent.png";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +30,9 @@ export default function Header() {
                 height={85}
                 priority
               />
-              <span className="hidden lg:inline">Ihr verlässlicher Partner im Baugewerbe</span>
+              <span className="hidden lg:inline">
+                Ihr verlässlicher Partner im Baugewerbe
+              </span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -70,16 +72,19 @@ export default function Header() {
               <span className="sr-only">Menü öffnen</span>
               <div className="relative w-6 h-12">
                 <span
-                  className={`absolute block w-10 h-1 bg-current transform transition-all duration-300 ease-in-out rounded ${isOpen ? "rotate-45 top-5" : "top-2"
-                    }`}
+                  className={`absolute block w-10 h-1 bg-current transform transition-all duration-300 ease-in-out rounded ${
+                    isOpen ? "rotate-45 top-5" : "top-2"
+                  }`}
                 />
                 <span
-                  className={`absolute block w-10 h-1 bg-current transform transition-all duration-300 ease-in-out rounded ${isOpen ? "opacity-0" : "opacity-100"
-                    } top-5`}
+                  className={`absolute block w-10 h-1 bg-current transform transition-all duration-300 ease-in-out rounded ${
+                    isOpen ? "opacity-0" : "opacity-100"
+                  } top-5`}
                 />
                 <span
-                  className={`absolute block w-10 h-1 bg-current transform transition-all duration-300 ease-in-out rounded ${isOpen ? "-rotate-45 top-5" : "top-8"
-                    }`}
+                  className={`absolute block w-10 h-1 bg-current transform transition-all duration-300 ease-in-out rounded ${
+                    isOpen ? "-rotate-45 top-5" : "top-8"
+                  }`}
                 />
               </div>
             </button>
