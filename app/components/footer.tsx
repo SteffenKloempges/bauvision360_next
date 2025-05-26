@@ -10,7 +10,7 @@ export default function Footer() {
                 </div>
                 <div>
                     <h3 className="text-xl font-bold mb-4">Kontakt</h3>
-                    <p>Oelder Straße 148a<br />59269 Beckum<br />Tel: +49 (0) 1575 52 67 68 0<br />Email: info@bauvision360.de</p>
+                    <p>Oelder Straße 148a<br />59269 Beckum<br />Tel: +49 (0) 175 10 360 03<br />Email: info@bauvision360.de</p>
                 </div>
                 <div>
                     <h3 className="text-xl font-bold mb-4">Links</h3>
