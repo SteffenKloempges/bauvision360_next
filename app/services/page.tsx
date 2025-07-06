@@ -18,7 +18,6 @@ export default function Services() {
     if (data) {
       setCurrentService(data);
       setIsModalOpen(true);
-      // Kurze Verzögerung, damit die initialen Styles angewendet werden können
       requestAnimationFrame(() => {
         setIsModalVisible(true);
       });
@@ -30,7 +29,6 @@ export default function Services() {
     if (professionalData) {
       setCurrentService(professionalData);
       setIsModalOpen(true);
-      // Kurze Verzögerung, damit die initialen Styles angewendet werden können
       requestAnimationFrame(() => {
         setIsModalVisible(true);
       });
@@ -65,7 +63,7 @@ export default function Services() {
           {Object.entries(serviceData).map(([key, service]) => (
             <FadeIn key={key}>
               <div
-                className="bg-white p-8 rounded-lg shadow-lg hover:-translate-y-1 transition-transform cursor-pointer h-full flex flex-col"
+                className="group bg-white p-8 rounded-lg shadow-lg hover:-translate-y-1 transition-transform cursor-pointer h-full flex flex-col"
                 onClick={() => openModal(key)}
               >
                 <div className="w-full h-48 relative mb-4 rounded overflow-hidden">
@@ -76,7 +74,7 @@ export default function Services() {
                     objectFit="cover"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-4">
+                <h3 className="text-xl font-bold text-primary mb-4 group-hover:text-secondary">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 flex-grow">{service.description}</p>
@@ -100,7 +98,7 @@ export default function Services() {
           {Object.entries(professionalServices).map(([key, service]) => (
             <FadeIn key={key}>
               <div
-                className="bg-white p-8 rounded-lg shadow-lg hover:-translate-y-1 transition-transform cursor-pointer h-full flex flex-col"
+                className="group bg-white p-8 rounded-lg shadow-lg hover:-translate-y-1 transition-transform cursor-pointer h-full flex flex-col"
                 onClick={() => openModal(key)}
               >
                 <div className="w-full h-48 relative mb-4 rounded overflow-hidden">
@@ -111,7 +109,7 @@ export default function Services() {
                     objectFit="cover"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-4">
+                <h3 className="text-xl font-bold text-primary mb-4 group-hover:text-secondary">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 flex-grow">{service.description}</p>
@@ -146,10 +144,16 @@ export default function Services() {
       {/* Modal */}
       {isModalOpen && currentService && (
         <div
-          className={`fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 transition-opacity duration-300 ease-in-out ${isModalVisible ? 'opacity-100' : 'opacity-0'}`}
+          className={`fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 transition-opacity duration-300 ease-in-out ${
+            isModalVisible ? "opacity-100" : "opacity-0"
+          }`}
           onClick={(e) => e.target === e.currentTarget && closeModal()}
         >
-          <div className={`bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all duration-300 ease-in-out ${isModalVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}>
+          <div
+            className={`bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all duration-300 ease-in-out ${
+              isModalVisible ? "scale-100 opacity-100" : "scale-95 opacity-0"
+            }`}
+          >
             <div className="p-8">
               <div className="flex justify-between items-start mb-6">
                 <h2 className="text-2xl font-bold text-primary">
@@ -180,7 +184,9 @@ export default function Services() {
               </div>
               <div className="text-center">
                 <Link
-                  href={`/contact?service=${encodeURIComponent(currentService.title)}`}
+                  href={`/contact?service=${encodeURIComponent(
+                    currentService.title
+                  )}`}
                   className="inline-block bg-primary hover:bg-secondary text-white px-8 py-4 rounded-md transition-colors"
                   onClick={(e) => e.target === e.currentTarget && closeModal()}
                 >

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import { contactData } from "../data/contactData";
 
 export default function ContactForm() {
   const searchParams = useSearchParams();
@@ -36,17 +37,14 @@ export default function ContactForm() {
     const selectedFiles = Array.from(e.target.files || []);
     setFileError(null);
 
-    // Überprüfe die Anzahl der Dateien
     if (selectedFiles.length > 5) {
       setFileError("Sie können maximal 5 Dateien hochladen.");
       e.target.value = "";
       return;
     }
 
-    // Überprüfe die Gesamtgröße aller Dateien
     const totalSize = selectedFiles.reduce((sum, file) => sum + file.size, 0);
     if (totalSize > 50 * 1024 * 1024) {
-      // 50MB Gesamtlimit
       setFileError(
         "Die Gesamtgröße aller Dateien darf 50MB nicht überschreiten."
       );
@@ -54,10 +52,8 @@ export default function ContactForm() {
       return;
     }
 
-    // Überprüfe die einzelnen Dateien
     for (const file of selectedFiles) {
       if (file.size > 10 * 1024 * 1024) {
-        // 10MB pro Datei
         setFileError("Einzelne Dateien dürfen nicht größer als 10MB sein.");
         e.target.value = "";
         return;
@@ -88,7 +84,6 @@ export default function ContactForm() {
         formDataToSend.append(key, value.toString());
       });
 
-      // Füge alle Dateien hinzu
       files.forEach((file, index) => {
         formDataToSend.append(`file${index}`, file);
       });
@@ -321,23 +316,23 @@ export default function ContactForm() {
               <a href="mailto:info@bauvision360.de">
                 <div className="text-primary text-3xl mb-4">📧</div>
                 <h3 className="text-xl font-semibold mb-2">E-Mail</h3>
-                <p className="text-gray-600">info@bauvision360.de</p>
+                <p className="text-gray-600">{contactData.email}</p>
               </a>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:-translate-y-2 transition-transform">
               <a href="tel:+4915755267680">
                 <div className="text-primary text-3xl mb-4">📱</div>
                 <h3 className="text-xl font-semibold mb-2">Telefon</h3>
-                <p className="text-gray-600">+49 (0) 175 10 360 03</p>
+                <p className="text-gray-600">{contactData.tel}</p>
               </a>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:-translate-y-2 transition-transform">
               <div className="text-primary text-3xl mb-4">🏢</div>
               <h3 className="text-xl font-semibold mb-2">Adresse</h3>
               <p className="text-gray-600">
-                Oelder Straße 148a
+                {contactData.address.street}
                 <br />
-                59269 Beckum
+                {contactData.address.code} {contactData.address.city}
               </p>
             </div>
           </div>

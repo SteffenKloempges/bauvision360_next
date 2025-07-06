@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Marcel from "../../images/Marcel_Lenckowski.png";
 import FadeIn from "@/app/components/FadeIn";
+import { contactData } from "../data/contactData";
 
 export default function About() {
   return (
@@ -8,7 +9,7 @@ export default function About() {
       <section className="px-5 py-8 lg:py-12 text-center">
         <FadeIn>
           <h1 className="text-4xl lg:text-5xl font-bold text-primary leading-tight">
-            Über BAUvision360&deg;
+            Über {contactData.company}
           </h1>
           <p className="text-xl text-gray-600">
             Ihr verlässlicher Partner im Baugewerbe
@@ -25,17 +26,18 @@ export default function About() {
               <p className="text-gray-600">
                 Durch langjährige Erfahrung als Bauingenieur/Projektleiter sowie
                 im Handwerk bieten wir Ihnen kompetente Beratung, exakte
-                Ausführung und eine reibungslose Projektumsetzung. Bei uns stehen
-                Qualität, Verlässlichkeit und Kundenzufriedenheit an oberster
-                Stelle. Ihre Wünsche setzen wir mit individueller Beratung um und
-                verwenden dabei ausschließlich erstklassige Materialien. Ob
-                Trockenbau, Bodenbeläge, Fenstermontage oder Winterdienst – wir
-                liefern präzise, ästhetische und nachhaltige Ergebnisse. Gemeinsam
-                mit unseren starken Partnern bieten wir auch ergänzende Leistungen
-                wie Maler- und Fliesenarbeiten sowie Sanitär-, Heizungs- und
-                Elektroinstallationen. Werden auch Sie Teil unseres zufriedenen
-                Kundenstamms – überzeugen Sie sich von unserer Arbeit! Lassen Sie
-                uns Ihr Projekt gemeinsam realisieren.
+                Ausführung und eine reibungslose Projektumsetzung. Bei uns
+                stehen Qualität, Verlässlichkeit und Kundenzufriedenheit an
+                oberster Stelle. Ihre Wünsche setzen wir mit individueller
+                Beratung um und verwenden dabei ausschließlich erstklassige
+                Materialien. Ob Trockenbau, Bodenbeläge, Fenstermontage oder
+                Winterdienst – wir liefern präzise, ästhetische und nachhaltige
+                Ergebnisse. Gemeinsam mit unseren starken Partnern bieten wir
+                auch ergänzende Leistungen wie Maler- und Fliesenarbeiten sowie
+                Sanitär-, Heizungs- und Elektroinstallationen. Werden auch Sie
+                Teil unseres zufriedenen Kundenstamms – überzeugen Sie sich von
+                unserer Arbeit! Lassen Sie uns Ihr Projekt gemeinsam
+                realisieren.
               </p>
             </div>
           </FadeIn>

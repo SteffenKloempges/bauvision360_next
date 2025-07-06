@@ -63,7 +63,6 @@ export default function Header() {
               </Link>
             </nav>
 
-            {/* Mobile menu button */}
             <button
               onClick={toggleMenu}
               className="md:hidden inline-flex items-center justify-center p-2 mr-4 rounded-md text-primary focus:outline-none"
@@ -92,7 +91,6 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden fixed inset-0 bg-white z-40">
           <div className="h-full flex flex-col">

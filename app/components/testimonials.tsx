@@ -14,7 +14,7 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    text: `Hervorragende Qualität in den Gewerken Trockenbau und Bodenbelagsarbeiten. Das Wichtigste: eine termingerechte Fertigstellung. Vom ersten Kennenlernen bis zur Übergabe verlief die Kommunikation reibungslos und professionell. Das nächste Projekt in der Nähe von Kamen ist bereits in Planung. BAUvision360° werden wir definitiv wieder anfragen. Auf eine langfristige und unkomplizierte Zusammenarbeit!`,
+    text: `Hervorragende Qualität in den Gewerken Trockenbau und Bodenbelagsarbeiten. Das Wichtigste: eine termingerechte Fertigstellung. Vom ersten Kennenlernen bis zur Übergabe verlief die Kommunikation reibungslos und professionell. Das nächste Projekt in der Nähe von Kamen ist bereits in Planung. BAUVISION360 werden wir definitiv wieder anfragen. Auf eine langfristige und unkomplizierte Zusammenarbeit!`,
     author: "Michael S.",
     role: "Projektentwickler",
   },
@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
   },
   {
     text: `Hallo,
-wir haben einen neuen Laminatboden für unser Haus bei BAUvision360° erworben und verlegen lassen. Die Qualität des Laminats ist sehr hochwertig. Es wurde sehr gewissenhaft gearbeitet. Bevor die Handwerker Feierabend gemacht haben, war immer alles sauber und aufgeräumt. BAUvision360° ist sehr zu empfehlen.
+wir haben einen neuen Laminatboden für unser Haus bei BAUVISION360 erworben und verlegen lassen. Die Qualität des Laminats ist sehr hochwertig. Es wurde sehr gewissenhaft gearbeitet. Bevor die Handwerker Feierabend gemacht haben, war immer alles sauber und aufgeräumt. BAUVISION360 ist sehr zu empfehlen.
 Viele Grüße
 Johanna und Markus`,
     author: "Johanna P.",
